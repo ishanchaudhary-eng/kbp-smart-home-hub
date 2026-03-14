@@ -1,0 +1,58 @@
+import { motion } from "framer-motion";
+import { Check } from "lucide-react";
+import LeadForm from "@/components/LeadForm";
+
+const pricingData = [
+  { type: "2 BHK Apartment", area: "850–1050 sq.ft.", price: "₹XX Lac*", features: ["2 Bedrooms", "2 Bathrooms", "Modular Kitchen", "Balcony", "Car Parking"] },
+  { type: "3 BHK Apartment", area: "1200–1450 sq.ft.", price: "₹XX Lac*", features: ["3 Bedrooms", "2 Bathrooms", "Large Living Room", "2 Balconies", "Car Parking"], popular: true },
+  { type: "Residential Plot", area: "100–300 sq.yd.", price: "₹XX Lac*", features: ["Freehold Property", "Demarcated Plots", "Wide Internal Roads", "All Civic Amenities", "Corner / Park Facing Available"] },
+];
+
+const PricingSection = () => (
+  <section id="pricing" className="py-20">
+    <div className="container mx-auto px-4">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+        <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Transparent Pricing</span>
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Price List</h2>
+        <p className="text-muted-foreground mt-3">No hidden charges. Best price guaranteed.</p>
+      </motion.div>
+
+      <div className="grid lg:grid-cols-4 gap-6">
+        {pricingData.map((item, i) => (
+          <motion.div
+            key={item.type}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.1 }}
+            className={`bg-card rounded-2xl border overflow-hidden ${item.popular ? "border-secondary ring-2 ring-secondary/20 shadow-lg relative" : ""}`}
+          >
+            {item.popular && (
+              <div className="bg-secondary text-secondary-foreground text-xs font-bold text-center py-1.5">
+                MOST POPULAR
+              </div>
+            )}
+            <div className="p-6">
+              <h3 className="text-lg font-bold text-foreground font-sans">{item.type}</h3>
+              <p className="text-muted-foreground text-sm mb-3">{item.area}</p>
+              <p className="text-3xl font-bold text-secondary mb-4">{item.price}</p>
+              <ul className="space-y-2">
+                {item.features.map((f) => (
+                  <li key={f} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Check className="w-4 h-4 text-secondary shrink-0" /> {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        ))}
+
+        <div>
+          <LeadForm title="Get Best Quote" buttonText="Get Quote →" variant="gold" compact />
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+export default PricingSection;
