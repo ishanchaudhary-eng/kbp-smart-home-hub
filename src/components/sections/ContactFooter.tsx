@@ -19,7 +19,7 @@ const ContactFooter = () => (
             </div>
             <div className="flex items-center gap-3">
               <Phone className="w-5 h-5 text-secondary shrink-0" />
-              <a href="tel:+91XXXXXXXXXX" className="text-sm text-primary-foreground/80 hover:text-secondary transition-colors">+91 XXXXXXXXXX</a>
+              <a href="tel:+918699366993" className="text-sm text-primary-foreground/80 hover:text-secondary transition-colors">+91 8699366993</a>
             </div>
             <div className="flex items-center gap-3">
               <Mail className="w-5 h-5 text-secondary shrink-0" />

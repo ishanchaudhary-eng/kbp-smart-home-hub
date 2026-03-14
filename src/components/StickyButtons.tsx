@@ -5,7 +5,7 @@ const StickyButtons = () => {
     <>
       {/* WhatsApp Floating Button - Bottom Right */}
       <a
-        href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20am%20interested%20in%20KBP%20Smart%20City.%20Please%20share%20details."
+        href="https://wa.me/918699366993?text=Hi%2C%20I%20am%20interested%20in%20KBP%20Smart%20City.%20Please%20share%20details."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-24 md:bottom-8 right-4 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform animate-pulse-gold"
@@ -16,7 +16,7 @@ const StickyButtons = () => {
 
       {/* Call Button - Desktop bottom left */}
       <a
-        href="tel:+91XXXXXXXXXX"
+        href="tel:+918699366993"
         className="hidden md:flex fixed bottom-8 left-4 z-50 bg-primary text-primary-foreground p-4 rounded-full shadow-2xl hover:scale-110 transition-transform items-center gap-2"
         aria-label="Call Now"
       >
@@ -26,11 +26,11 @@ const StickyButtons = () => {
       {/* Mobile Bottom Bar */}
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-primary shadow-[0_-4px_20px_rgba(0,0,0,0.2)]">
         <div className="grid grid-cols-3 divide-x divide-primary-foreground/20">
-          <a href="tel:+91XXXXXXXXXX" className="flex flex-col items-center gap-1 py-3 text-primary-foreground hover:bg-primary-foreground/10 transition-colors">
+          <a href="tel:+918699366993" className="flex flex-col items-center gap-1 py-3 text-primary-foreground hover:bg-primary-foreground/10 transition-colors">
             <Phone className="w-5 h-5" />
             <span className="text-xs font-medium">Call</span>
           </a>
-          <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 py-3 text-primary-foreground hover:bg-primary-foreground/10 transition-colors">
+          <a href="https://wa.me/918699366993" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 py-3 text-primary-foreground hover:bg-primary-foreground/10 transition-colors">
             <MessageCircle className="w-5 h-5" />
             <span className="text-xs font-medium">WhatsApp</span>
           </a>

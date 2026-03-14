@@ -24,7 +24,7 @@ const HeroSection = () => {
               Affordable Homes Near Chandigarh
             </h1>
             <p className="text-primary-foreground/80 text-lg mb-4">
-              2 & 3 BHK Apartments • Residential Plots • Commercial Spaces
+              2 & 3 BHK Apartments • Villas • Residential Plots • Commercial Spaces
             </p>
             <div className="flex items-center gap-2 text-primary-foreground/70 mb-6">
               <MapPin className="w-5 h-5 text-secondary" />
@@ -34,7 +34,7 @@ const HeroSection = () => {
             {/* Price */}
             <div className="bg-secondary/20 rounded-xl p-4 inline-block mb-6">
               <p className="text-primary-foreground/60 text-sm">Starting From</p>
-              <p className="text-3xl font-bold text-secondary">₹XX Lakhs*</p>
+              <p className="text-3xl font-bold text-secondary">₹48 Lakhs*</p>
               <p className="text-primary-foreground/50 text-xs">*T&C Apply</p>
             </div>
 
