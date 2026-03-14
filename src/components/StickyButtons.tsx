@@ -30,7 +30,7 @@ const StickyButtons = () => {
             <Phone className="w-5 h-5" />
             <span className="text-xs font-medium">Call</span>
           </a>
-          <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 py-3 text-primary-foreground hover:bg-primary-foreground/10 transition-colors">
+          <a href="https://wa.me/918699366993" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 py-3 text-primary-foreground hover:bg-primary-foreground/10 transition-colors">
             <MessageCircle className="w-5 h-5" />
             <span className="text-xs font-medium">WhatsApp</span>
           </a>

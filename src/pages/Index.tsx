@@ -17,6 +17,7 @@ const Index = () => (
     <HeroSection />
     <QuickHighlights />
     <ProjectOverview />
+    <ConnectivityTimeline />
     <WhyChoose />
     <PropertyOptions />
     <Amenities />
