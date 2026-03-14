@@ -11,6 +11,7 @@ import Apartments from "./pages/Apartments";
 import Plots from "./pages/Plots";
 import Commercial from "./pages/Commercial";
 import Location from "./pages/Location";
+import Amenities from "./pages/Amenities";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/plots" element={<Plots />} />
           <Route path="/commercial" element={<Commercial />} />
           <Route path="/location" element={<Location />} />
+          <Route path="/amenities" element={<Amenities />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <StickyButtons />
