@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Highway, Building2, Landmark, GraduationCap, MapPin, Clock } from "lucide-react";
+import { Route, Building2, Landmark, GraduationCap, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const stops = [
