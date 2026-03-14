@@ -30,6 +30,7 @@ const App = () => (
           <Route path="/plots" element={<Plots />} />
           <Route path="/commercial" element={<Commercial />} />
           <Route path="/location" element={<Location />} />
+          <Route path="/amenities" element={<Amenities />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <StickyButtons />
