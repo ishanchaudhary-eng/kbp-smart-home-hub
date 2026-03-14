@@ -7,7 +7,7 @@ const stops = [
     name: "Bharatmala Expressway",
     time: "0 Min",
     highlight: "Direct connectivity to the national expressway network.",
-    icon: Highway,
+    icon: Route,
   },
   {
     name: "Mohali",
