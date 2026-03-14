@@ -5,7 +5,7 @@ const StickyButtons = () => {
     <>
       {/* WhatsApp Floating Button - Bottom Right */}
       <a
-        href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20am%20interested%20in%20KBP%20Smart%20City.%20Please%20share%20details."
+        href="https://wa.me/918699366993?text=Hi%2C%20I%20am%20interested%20in%20KBP%20Smart%20City.%20Please%20share%20details."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-24 md:bottom-8 right-4 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform animate-pulse-gold"
