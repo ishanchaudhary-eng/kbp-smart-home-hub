@@ -26,7 +26,7 @@ const StickyButtons = () => {
       {/* Mobile Bottom Bar */}
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-primary shadow-[0_-4px_20px_rgba(0,0,0,0.2)]">
         <div className="grid grid-cols-3 divide-x divide-primary-foreground/20">
-          <a href="tel:+91XXXXXXXXXX" className="flex flex-col items-center gap-1 py-3 text-primary-foreground hover:bg-primary-foreground/10 transition-colors">
+          <a href="tel:+918699366993" className="flex flex-col items-center gap-1 py-3 text-primary-foreground hover:bg-primary-foreground/10 transition-colors">
             <Phone className="w-5 h-5" />
             <span className="text-xs font-medium">Call</span>
           </a>
