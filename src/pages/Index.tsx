@@ -1,14 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/sections/HeroSection";
+import QuickHighlights from "@/components/sections/QuickHighlights";
+import ProjectOverview from "@/components/sections/ProjectOverview";
+import WhyChoose from "@/components/sections/WhyChoose";
+import PropertyOptions from "@/components/sections/PropertyOptions";
+import Amenities from "@/components/sections/Amenities";
+import LocationAdvantage from "@/components/sections/LocationAdvantage";
+import FloorPlans from "@/components/sections/FloorPlans";
+import PricingSection from "@/components/sections/PricingSection";
+import InvestmentOpportunity from "@/components/sections/InvestmentOpportunity";
+import AboutKBP from "@/components/sections/AboutKBP";
+import SiteVisitCTA from "@/components/sections/SiteVisitCTA";
+import ContactFooter from "@/components/sections/ContactFooter";
 
-const Index = () => {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
-  );
-};
+const Index = () => (
+  <main className="scroll-smooth">
+    <HeroSection />
+    <QuickHighlights />
+    <ProjectOverview />
+    <WhyChoose />
+    <PropertyOptions />
+    <Amenities />
+    <LocationAdvantage />
+    <FloorPlans />
+    <PricingSection />
+    <InvestmentOpportunity />
+    <AboutKBP />
+    <SiteVisitCTA />
+    <ContactFooter />
+  </main>
+);
 
 export default Index;
