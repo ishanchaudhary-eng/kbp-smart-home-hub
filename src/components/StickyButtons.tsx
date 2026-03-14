@@ -16,7 +16,7 @@ const StickyButtons = () => {
 
       {/* Call Button - Desktop bottom left */}
       <a
-        href="tel:+91XXXXXXXXXX"
+        href="tel:+918699366993"
         className="hidden md:flex fixed bottom-8 left-4 z-50 bg-primary text-primary-foreground p-4 rounded-full shadow-2xl hover:scale-110 transition-transform items-center gap-2"
         aria-label="Call Now"
       >
