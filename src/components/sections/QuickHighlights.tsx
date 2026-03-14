@@ -1,16 +1,19 @@
-import { IndianRupee, Route, ShieldCheck, Users } from "lucide-react";
+import { Route, IndianRupee, Building2, TreePine } from "lucide-react";
 import { motion } from "framer-motion";
 
 const highlights = [
-  { icon: IndianRupee, title: "Affordable Homes", desc: "Best price per sq. ft. near Chandigarh" },
-  { icon: Route, title: "Highway Connectivity", desc: "Located on 200 ft wide NH-21" },
-  { icon: ShieldCheck, title: "Gated Township", desc: "24/7 security with CCTV surveillance" },
-  { icon: Users, title: "Family Friendly", desc: "Parks, schools & healthcare nearby" },
+  { icon: Route, title: "Highway Connectivity", desc: "Located on the 200 ft wide NH-21 highway connecting Chandigarh, Kharar and Kurali." },
+  { icon: IndianRupee, title: "Affordable Housing", desc: "Perfect for middle-class families looking for their first home near Chandigarh." },
+  { icon: Building2, title: "Complete Township", desc: "Apartments, plots, villas and commercial spaces in one integrated development." },
+  { icon: TreePine, title: "Peaceful Living", desc: "Green surroundings, parks and family friendly environment." },
 ];
 
 const QuickHighlights = () => (
   <section className="py-16 bg-warm-gray">
     <div className="container mx-auto px-4">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Why KBP Smart City Is A Smart Choice</h2>
+      </motion.div>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         {highlights.map((item, i) => (
           <motion.div
@@ -24,7 +27,7 @@ const QuickHighlights = () => (
             <div className="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
               <item.icon className="w-7 h-7 text-secondary" />
             </div>
-            <h3 className="font-bold text-foreground mb-1 font-sans text-sm md:text-base">{item.title}</h3>
+            <h3 className="font-bold text-foreground mb-2 font-sans text-sm md:text-base">{item.title}</h3>
             <p className="text-muted-foreground text-xs md:text-sm">{item.desc}</p>
           </motion.div>
         ))}

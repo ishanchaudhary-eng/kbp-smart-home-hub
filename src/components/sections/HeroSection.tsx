@@ -1,26 +1,17 @@
-import { MapPin, Home, Building2, LandPlot, Store } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 import LeadForm from "@/components/LeadForm";
-
-const configs = [
-  { icon: Home, label: "2 BHK" },
-  { icon: Home, label: "3 BHK" },
-  { icon: LandPlot, label: "Plots" },
-  { icon: Building2, label: "Villas" },
-  { icon: Store, label: "Commercial" },
-];
 
 const HeroSection = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-navy-dark" />
       <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-10" />
       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent" />
 
       <div className="container mx-auto px-4 relative z-10 py-12 md:py-20">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -30,31 +21,38 @@ const HeroSection = () => {
               🏗️ New Launch — Book Now
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground leading-tight mb-4">
-              KBP Smart City
+              Affordable Homes Near Chandigarh
             </h1>
-            <div className="flex items-center gap-2 text-primary-foreground/80 mb-4">
-              <MapPin className="w-5 h-5 text-secondary" />
-              <span className="text-lg">NH-21 Kharar–Kurali Highway, Mohali</span>
-            </div>
-            <p className="text-primary-foreground/70 text-lg mb-6 max-w-lg">
-              Premium affordable township with world-class amenities. Your dream home awaits near Chandigarh.
+            <p className="text-primary-foreground/80 text-lg mb-4">
+              2 & 3 BHK Apartments • Residential Plots • Commercial Spaces
             </p>
-
-            {/* Config Tags */}
-            <div className="flex flex-wrap gap-2 mb-6">
-              {configs.map(({ icon: Icon, label }) => (
-                <div key={label} className="flex items-center gap-1.5 bg-primary-foreground/10 text-primary-foreground px-3 py-2 rounded-lg text-sm border border-primary-foreground/10">
-                  <Icon className="w-4 h-4 text-secondary" />
-                  {label}
-                </div>
-              ))}
+            <div className="flex items-center gap-2 text-primary-foreground/70 mb-6">
+              <MapPin className="w-5 h-5 text-secondary" />
+              <span className="text-lg">Located on NH-21 Kharar–Kurali Highway</span>
             </div>
 
             {/* Price */}
             <div className="bg-secondary/20 rounded-xl p-4 inline-block mb-6">
               <p className="text-primary-foreground/60 text-sm">Starting From</p>
-              <p className="text-3xl font-bold text-secondary">₹XX Lac*</p>
+              <p className="text-3xl font-bold text-secondary">₹XX Lakhs*</p>
               <p className="text-primary-foreground/50 text-xs">*T&C Apply</p>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-3 mb-6">
+              <Button
+                className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold text-base h-12 px-8 animate-pulse-gold"
+                onClick={() => document.getElementById("hero-form")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Get Price List
+              </Button>
+              <Button
+                variant="outline"
+                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-bold text-base h-12 px-8"
+                onClick={() => document.getElementById("site-visit")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Book Site Visit
+              </Button>
             </div>
 
             {/* Trust Badges */}
@@ -65,7 +63,6 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
-          {/* Right Form */}
           <motion.div
             id="hero-form"
             initial={{ opacity: 0, x: 30 }}
@@ -74,7 +71,7 @@ const HeroSection = () => {
           >
             <LeadForm
               title="Get Instant Price List"
-              buttonText="Get Price List →"
+              buttonText="Submit Enquiry"
               variant="light"
               className="max-w-md mx-auto lg:ml-auto"
             />
