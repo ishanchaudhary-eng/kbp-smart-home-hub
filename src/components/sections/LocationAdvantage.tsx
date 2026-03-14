@@ -1,14 +1,13 @@
 import { motion } from "framer-motion";
-import { MapPin, Clock, Building2, Laptop, Route } from "lucide-react";
-import LeadForm from "@/components/LeadForm";
+import { MapPin, GraduationCap, Hospital, TrendingUp, Route } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-const distances = [
-  { icon: MapPin, place: "Chandigarh", dist: "20 min", detail: "Easy commute to the city" },
-  { icon: Building2, place: "Mohali", dist: "15 min", detail: "Close to Phase 7 & 8" },
-  { icon: Laptop, place: "IT City Mohali", dist: "10 min", detail: "Near Quark City & IT Hub" },
-  { icon: Route, place: "NH-21 Highway", dist: "On Road", detail: "200 ft wide national highway" },
-  { icon: Clock, place: "Chandigarh Airport", dist: "25 min", detail: "Well connected by air" },
-  { icon: Building2, place: "Panchkula", dist: "30 min", detail: "Tricity connectivity" },
+const points = [
+  { icon: Route, text: "Located on NH-21 Kharar Kurali Highway" },
+  { icon: MapPin, text: "Easy access to Chandigarh and Mohali" },
+  { icon: GraduationCap, text: "Close to schools and colleges" },
+  { icon: Hospital, text: "Nearby hospitals and shopping areas" },
+  { icon: TrendingUp, text: "Growing real estate corridor" },
 ];
 
 const LocationAdvantage = () => (
@@ -16,41 +15,37 @@ const LocationAdvantage = () => (
     <div className="container mx-auto px-4">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
         <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Strategic Location</span>
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Location Advantage</h2>
-        <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">Strategically located on the 200 ft wide NH-21 Kharar–Kurali Highway with excellent connectivity to Chandigarh, Mohali and all major destinations.</p>
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Excellent Location Connectivity</h2>
       </motion.div>
 
-      <div className="grid lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-2">
-          <div className="grid sm:grid-cols-2 gap-4">
-            {distances.map((d, i) => (
-              <motion.div
-                key={d.place}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="flex items-start gap-4 bg-card border rounded-xl p-4 hover:shadow-md transition-shadow"
-              >
-                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center shrink-0">
-                  <d.icon className="w-5 h-5 text-secondary" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground font-sans">{d.place}</h4>
-                  <p className="text-secondary font-semibold text-sm">{d.dist}</p>
-                  <p className="text-muted-foreground text-xs">{d.detail}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          {/* Map Placeholder */}
-          <div className="mt-6 bg-muted rounded-xl h-64 flex items-center justify-center border">
-            <p className="text-muted-foreground text-sm">📍 Google Map — Coming Soon</p>
-          </div>
+      <div className="max-w-3xl mx-auto">
+        <div className="space-y-4 mb-8">
+          {points.map((p, i) => (
+            <motion.div
+              key={p.text}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+              className="flex items-center gap-4 bg-card border rounded-xl p-4 hover:shadow-md transition-shadow"
+            >
+              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center shrink-0">
+                <p.icon className="w-5 h-5 text-secondary" />
+              </div>
+              <p className="font-medium text-foreground">{p.text}</p>
+            </motion.div>
+          ))}
         </div>
 
-        <div>
-          <LeadForm title="Download Location Map" buttonText="Send Me Location →" variant="gold" />
+        {/* Map Placeholder */}
+        <div className="bg-muted rounded-xl h-64 flex items-center justify-center border mb-6">
+          <p className="text-muted-foreground text-sm">📍 Google Map — Coming Soon</p>
+        </div>
+
+        <div className="text-center">
+          <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold h-12 px-8">
+            View Location Map
+          </Button>
         </div>
       </div>
     </div>

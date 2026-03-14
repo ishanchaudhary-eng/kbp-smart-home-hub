@@ -1,17 +1,14 @@
 import { motion } from "framer-motion";
-import { TreePine, PersonStanding, Baby, Building, Dumbbell, ShieldCheck, Car, Droplets, Zap, Wifi } from "lucide-react";
+import { Building, Baby, PersonStanding, TreePine, Dumbbell, ShieldCheck } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const amenities = [
-  { icon: TreePine, label: "Landscaped Parks" },
-  { icon: PersonStanding, label: "Jogging Track" },
-  { icon: Baby, label: "Kids Play Area" },
   { icon: Building, label: "Clubhouse" },
-  { icon: Dumbbell, label: "Modern Gym" },
-  { icon: ShieldCheck, label: "24/7 Security" },
-  { icon: Car, label: "Ample Parking" },
-  { icon: Droplets, label: "Water Supply" },
-  { icon: Zap, label: "Power Backup" },
-  { icon: Wifi, label: "Smart Features" },
+  { icon: Baby, label: "Children's Play Area" },
+  { icon: PersonStanding, label: "Jogging Track" },
+  { icon: TreePine, label: "Parks & Green Spaces" },
+  { icon: Dumbbell, label: "Gym & Fitness Area" },
+  { icon: ShieldCheck, label: "Gated Security" },
 ];
 
 const Amenities = () => (
@@ -19,9 +16,9 @@ const Amenities = () => (
     <div className="container mx-auto px-4">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
         <span className="text-secondary font-semibold text-sm uppercase tracking-wider">World-Class Living</span>
-        <h2 className="text-3xl md:text-4xl font-display font-bold mt-2">Premium Amenities</h2>
+        <h2 className="text-3xl md:text-4xl font-display font-bold mt-2">Lifestyle Amenities For Your Family</h2>
       </motion.div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto">
         {amenities.map((a, i) => (
           <motion.div
             key={a.label}
@@ -35,6 +32,11 @@ const Amenities = () => (
             <p className="text-sm font-medium text-primary-foreground/80">{a.label}</p>
           </motion.div>
         ))}
+      </div>
+      <div className="text-center mt-8">
+        <Button variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold h-12 px-8">
+          View All Amenities
+        </Button>
       </div>
     </div>
   </section>

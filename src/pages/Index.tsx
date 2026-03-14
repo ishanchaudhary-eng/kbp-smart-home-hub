@@ -7,7 +7,6 @@ import Amenities from "@/components/sections/Amenities";
 import LocationAdvantage from "@/components/sections/LocationAdvantage";
 import FloorPlans from "@/components/sections/FloorPlans";
 import PricingSection from "@/components/sections/PricingSection";
-import InvestmentOpportunity from "@/components/sections/InvestmentOpportunity";
 import AboutKBP from "@/components/sections/AboutKBP";
 import SiteVisitCTA from "@/components/sections/SiteVisitCTA";
 import ContactFooter from "@/components/sections/ContactFooter";
@@ -23,7 +22,6 @@ const Index = () => (
     <LocationAdvantage />
     <FloorPlans />
     <PricingSection />
-    <InvestmentOpportunity />
     <AboutKBP />
     <SiteVisitCTA />
     <ContactFooter />

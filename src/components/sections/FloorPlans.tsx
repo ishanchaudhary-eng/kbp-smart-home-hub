@@ -13,9 +13,12 @@ const FloorPlans = () => {
   return (
     <section id="floor-plans" className="py-20 bg-warm-gray">
       <div className="container mx-auto px-4">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-8">
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Layouts</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Floor Plans</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Smartly Designed Homes</h2>
+          <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
+            The apartments at KBP Smart City are designed to maximize space, ventilation and natural light. Each layout focuses on comfortable family living.
+          </p>
         </motion.div>
 
         <div className="flex justify-center gap-3 mb-8">
@@ -57,8 +60,8 @@ const FloorPlans = () => {
           </div>
 
           <div className="text-center mt-6">
-            <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold" onClick={() => document.getElementById("hero-form")?.scrollIntoView({ behavior: "smooth" })}>
-              Download Floor Plan PDF →
+            <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold h-12 px-8">
+              View Floor Plans
             </Button>
           </div>
         </motion.div>

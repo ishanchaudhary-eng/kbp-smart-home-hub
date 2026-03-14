@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import LeadForm from "@/components/LeadForm";
 
 const pricingData = [
@@ -13,8 +14,10 @@ const PricingSection = () => (
     <div className="container mx-auto px-4">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
         <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Transparent Pricing</span>
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Price List</h2>
-        <p className="text-muted-foreground mt-3">No hidden charges. Best price guaranteed.</p>
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Affordable Pricing Options</h2>
+        <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
+          KBP Smart City offers competitively priced homes and plots, making it one of the most affordable township developments near Chandigarh.
+        </p>
       </motion.div>
 
       <div className="grid lg:grid-cols-4 gap-6">
@@ -48,7 +51,7 @@ const PricingSection = () => (
         ))}
 
         <div>
-          <LeadForm title="Get Best Quote" buttonText="Get Quote →" variant="gold" compact />
+          <LeadForm title="Request Price Sheet" buttonText="Request Price Sheet →" variant="gold" compact />
         </div>
       </div>
     </div>

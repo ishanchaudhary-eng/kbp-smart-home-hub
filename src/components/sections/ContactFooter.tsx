@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import LeadForm from "@/components/LeadForm";
 
 const ContactFooter = () => (
@@ -39,20 +40,24 @@ const ContactFooter = () => (
               <a key={link} href="#" className="text-sm text-primary-foreground/60 hover:text-secondary transition-colors py-1">{link}</a>
             ))}
           </div>
-          <div className="mt-8">
-            <h4 className="font-semibold text-sm mb-3 font-sans">Target Keywords</h4>
-            <div className="flex flex-wrap gap-2">
-              {["Flats in Kharar", "2 BHK Mohali", "Plots Near Chandigarh", "Affordable Homes Tricity"].map((kw) => (
-                <span key={kw} className="text-xs bg-primary-foreground/5 text-primary-foreground/50 px-2 py-1 rounded">{kw}</span>
-              ))}
-            </div>
+
+          {/* RERA Info */}
+          <div className="mt-8 bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl p-4">
+            <h4 className="font-semibold text-sm mb-2 font-sans text-secondary">RERA Information</h4>
+            <p className="text-xs text-primary-foreground/60">RERA Registration No: XXXXXXXXXX</p>
+            <p className="text-xs text-primary-foreground/50 mt-1">Visit rera.punjab.gov.in for details</p>
           </div>
         </div>
 
         {/* Contact Form */}
         <div>
-          <LeadForm title="Send Us a Message" buttonText="Send Message →" variant="dark" />
+          <LeadForm title="Send Us a Message" buttonText="Send Enquiry →" variant="dark" />
         </div>
+      </div>
+
+      {/* Map Placeholder */}
+      <div className="mt-12 bg-primary-foreground/5 rounded-xl h-48 flex items-center justify-center border border-primary-foreground/10">
+        <p className="text-primary-foreground/40 text-sm">📍 Google Map — Coming Soon</p>
       </div>
     </div>
 
