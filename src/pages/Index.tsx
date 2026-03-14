@@ -1,6 +1,7 @@
 import HeroSection from "@/components/sections/HeroSection";
 import QuickHighlights from "@/components/sections/QuickHighlights";
 import ProjectOverview from "@/components/sections/ProjectOverview";
+import ConnectivityTimeline from "@/components/sections/ConnectivityTimeline";
 import WhyChoose from "@/components/sections/WhyChoose";
 import PropertyOptions from "@/components/sections/PropertyOptions";
 import Amenities from "@/components/sections/Amenities";
