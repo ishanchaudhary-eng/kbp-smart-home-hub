@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Apartments from "./pages/Apartments";
 import Plots from "./pages/Plots";
 import Commercial from "./pages/Commercial";
+import Location from "./pages/Location";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
