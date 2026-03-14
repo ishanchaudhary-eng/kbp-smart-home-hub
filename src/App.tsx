@@ -28,6 +28,7 @@ const App = () => (
           <Route path="/apartments" element={<Apartments />} />
           <Route path="/plots" element={<Plots />} />
           <Route path="/commercial" element={<Commercial />} />
+          <Route path="/location" element={<Location />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <StickyButtons />
