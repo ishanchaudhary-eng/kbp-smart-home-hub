@@ -44,12 +44,17 @@ interface ShopFormProps {
 const ShopForm = ({ title, buttonText, variant = "light", showBusiness = false, showBudget = false, showDate = false }: ShopFormProps) => {
   const [data, setData] = useState({ name: "", phone: "", business: "", budget: "", date: "" });
   const [done, setDone] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
   const { toast } = useToast();
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!data.name || !data.phone) {
       toast({ title: "Please fill required fields", description: "Name and phone are required.", variant: "destructive" });
+      return;
+    }
+    if (!captchaVerified) {
+      toast({ title: "Please solve the math question", variant: "destructive" });
       return;
     }
     setDone(true);
