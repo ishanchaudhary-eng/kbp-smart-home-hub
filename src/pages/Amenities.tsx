@@ -55,12 +55,17 @@ interface AmenityFormProps {
 const AmenityForm = ({ title, buttonText, variant = "light", showInterest = false, showDate = false }: AmenityFormProps) => {
   const [data, setData] = useState({ name: "", phone: "", interest: "", date: "" });
   const [done, setDone] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
   const { toast } = useToast();
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!data.name || !data.phone) {
       toast({ title: "Please fill required fields", description: "Name and phone are required.", variant: "destructive" });
+      return;
+    }
+    if (!captchaVerified) {
+      toast({ title: "Please solve the math question", variant: "destructive" });
       return;
     }
     setDone(true);
