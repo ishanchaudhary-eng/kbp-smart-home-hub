@@ -168,6 +168,7 @@ const MiniForm = ({
             className={inp}
           />
         )}
+        <MathCaptcha onVerified={setCaptchaVerified} inputClassName={inp} />
         <Button
           type="submit"
           className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold text-base h-12 animate-pulse-gold"
