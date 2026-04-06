@@ -98,6 +98,7 @@ const ShopForm = ({ title, buttonText, variant = "light", showBusiness = false, 
           </select>
         )}
         {showDate && <Input placeholder="Preferred Visit Date" type="date" value={data.date} onChange={(e) => setData({ ...data, date: e.target.value })} className={inp} />}
+        <MathCaptcha onVerified={setCaptchaVerified} inputClassName={inp} />
         <Button type="submit" className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold text-base h-12 animate-pulse-gold">{buttonText}</Button>
       </form>
       <p className="text-xs opacity-50 mt-2 text-center">We respect your privacy. No spam.</p>
