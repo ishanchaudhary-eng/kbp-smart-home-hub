@@ -25,6 +25,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import ContactFooter from "@/components/sections/ContactFooter";
 import { useToast } from "@/hooks/use-toast";
+import MathCaptcha from "@/components/MathCaptcha";
 import {
   Accordion,
   AccordionContent,
@@ -52,12 +53,17 @@ const PlotForm = ({
 }: PlotFormProps) => {
   const [data, setData] = useState({ name: "", phone: "", size: "", city: "", date: "" });
   const [done, setDone] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
   const { toast } = useToast();
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!data.name || !data.phone) {
       toast({ title: "Please fill required fields", description: "Name and phone are required.", variant: "destructive" });
+      return;
+    }
+    if (!captchaVerified) {
+      toast({ title: "Please solve the math question", variant: "destructive" });
       return;
     }
     setDone(true);
@@ -94,6 +100,7 @@ const PlotForm = ({
         )}
         {showCity && <Input placeholder="City" value={data.city} onChange={(e) => setData({ ...data, city: e.target.value })} className={inp} />}
         {showDate && <Input placeholder="Preferred Visit Date" type="date" value={data.date} onChange={(e) => setData({ ...data, date: e.target.value })} className={inp} />}
+        <MathCaptcha onVerified={setCaptchaVerified} inputClassName={inp} />
         <Button type="submit" className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold text-base h-12 animate-pulse-gold">
           {buttonText}
         </Button>

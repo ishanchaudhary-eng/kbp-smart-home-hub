@@ -2,12 +2,13 @@ import { MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import LeadForm from "@/components/LeadForm";
+import villasImg from "@/assets/villas-exterior.webp";
 
 const HeroSection = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-navy-dark" />
-      <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-10" />
+      <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url(${villasImg})` }} />
       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent" />
 
       <div className="container mx-auto px-4 relative z-10 py-12 md:py-20">
@@ -34,7 +35,7 @@ const HeroSection = () => {
             {/* Price */}
             <div className="bg-secondary/20 rounded-xl p-4 inline-block mb-6">
               <p className="text-primary-foreground/60 text-sm">Starting From</p>
-              <p className="text-3xl font-bold text-secondary">₹48 Lakhs*</p>
+              <p className="text-3xl font-bold text-secondary">₹54.90 Lakhs*</p>
               <p className="text-primary-foreground/50 text-xs">*T&C Apply</p>
             </div>
 

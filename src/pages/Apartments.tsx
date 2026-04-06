@@ -23,6 +23,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import ContactFooter from "@/components/sections/ContactFooter";
 import { useToast } from "@/hooks/use-toast";
+import MathCaptcha from "@/components/MathCaptcha";
+import apartmentImg from "@/assets/2_BHK.jpeg";
 
 /* ───── highlight cards data ───── */
 const highlights = [
@@ -84,6 +86,7 @@ const MiniForm = ({
 }: MiniFormProps) => {
   const [data, setData] = useState({ name: "", phone: "", type: "", date: "" });
   const [done, setDone] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
   const { toast } = useToast();
 
   const submit = (e: React.FormEvent) => {
@@ -94,6 +97,10 @@ const MiniForm = ({
         description: "Name and phone are required.",
         variant: "destructive",
       });
+      return;
+    }
+    if (!captchaVerified) {
+      toast({ title: "Please solve the math question", variant: "destructive" });
       return;
     }
     setDone(true);
@@ -163,6 +170,7 @@ const MiniForm = ({
             className={inp}
           />
         )}
+        <MathCaptcha onVerified={setCaptchaVerified} inputClassName={inp} />
         <Button
           type="submit"
           className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold text-base h-12 animate-pulse-gold"
@@ -184,7 +192,7 @@ const Apartments = () => (
     {/* ── SECTION 1 – HERO ── */}
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-navy-dark" />
-      <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-10" />
+      <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url(${apartmentImg})` }} />
       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent" />
 
       <div className="container mx-auto px-4 relative z-10 py-12 md:py-20">
@@ -212,7 +220,7 @@ const Apartments = () => (
 
             <div className="bg-secondary/20 rounded-xl p-4 inline-block mb-6">
               <p className="text-primary-foreground/60 text-sm">Flats Starting From</p>
-              <p className="text-3xl font-bold text-secondary">₹48.9 Lakhs*</p>
+              <p className="text-3xl font-bold text-secondary">₹54.90 Lakhs*</p>
               <p className="text-primary-foreground/50 text-xs">*T&C Apply</p>
             </div>
 
@@ -601,7 +609,7 @@ const Apartments = () => (
                     850 – 1050 sq.ft.
                   </p>
                 </div>
-                <p className="text-2xl font-bold text-secondary">₹48.9 Lac*</p>
+                <p className="text-2xl font-bold text-secondary">₹54.90 Lac*</p>
               </div>
               <div className="bg-card rounded-xl border border-secondary ring-2 ring-secondary/20 p-5 flex justify-between items-center relative overflow-hidden">
                 <div className="absolute top-0 right-0 bg-secondary text-secondary-foreground text-[10px] font-bold px-3 py-0.5 rounded-bl-lg">
@@ -615,7 +623,7 @@ const Apartments = () => (
                     1200 – 1450 sq.ft.
                   </p>
                 </div>
-                <p className="text-2xl font-bold text-secondary">₹58 Lac*</p>
+                <p className="text-2xl font-bold text-secondary">₹64 Lac*</p>
               </div>
             </div>
 

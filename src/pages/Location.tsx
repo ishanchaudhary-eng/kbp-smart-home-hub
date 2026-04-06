@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
+import MathCaptcha from "@/components/MathCaptcha";
 
 const connectivityData = [
   { city: "Chandigarh", time: "~25 min", icon: Building2 },
@@ -39,12 +40,17 @@ const conveniences = [
 const Location = () => {
   const [form, setForm] = useState({ name: "", phone: "", time: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.phone) {
       toast({ title: "Please fill required fields", variant: "destructive" });
+      return;
+    }
+    if (!captchaVerified) {
+      toast({ title: "Please solve the math question", variant: "destructive" });
       return;
     }
     setSubmitted(true);
@@ -290,6 +296,7 @@ const Location = () => {
                       <Input placeholder="Your Name *" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required />
                       <Input placeholder="Phone Number *" type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} required />
                       <Input placeholder="Preferred Visit Time" value={form.time} onChange={(e) => setForm({ ...form, time: e.target.value })} />
+                      <MathCaptcha onVerified={setCaptchaVerified} />
                       <Button type="submit" className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold text-base h-12 animate-pulse-gold">
                         Book Site Visit →
                       </Button>

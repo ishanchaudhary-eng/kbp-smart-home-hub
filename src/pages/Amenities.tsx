@@ -36,6 +36,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import ContactFooter from "@/components/sections/ContactFooter";
 import { useToast } from "@/hooks/use-toast";
+import MathCaptcha from "@/components/MathCaptcha";
 import {
   Accordion,
   AccordionContent,
@@ -55,12 +56,17 @@ interface AmenityFormProps {
 const AmenityForm = ({ title, buttonText, variant = "light", showInterest = false, showDate = false }: AmenityFormProps) => {
   const [data, setData] = useState({ name: "", phone: "", interest: "", date: "" });
   const [done, setDone] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
   const { toast } = useToast();
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!data.name || !data.phone) {
       toast({ title: "Please fill required fields", description: "Name and phone are required.", variant: "destructive" });
+      return;
+    }
+    if (!captchaVerified) {
+      toast({ title: "Please solve the math question", variant: "destructive" });
       return;
     }
     setDone(true);
@@ -96,6 +102,7 @@ const AmenityForm = ({ title, buttonText, variant = "light", showInterest = fals
           </select>
         )}
         {showDate && <Input placeholder="Preferred Visit Date" type="date" value={data.date} onChange={(e) => setData({ ...data, date: e.target.value })} className={inp} />}
+        <MathCaptcha onVerified={setCaptchaVerified} inputClassName={inp} />
         <Button type="submit" className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold text-base h-12 animate-pulse-gold">{buttonText}</Button>
       </form>
       <p className="text-xs opacity-50 mt-2 text-center">We respect your privacy. No spam.</p>

@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import LeadForm from "@/components/LeadForm";
 
 const pricingData = [
-  { type: "2 BHK Apartment", area: "850–1050 sq.ft.", price: "₹48 Lac*", features: ["2 Bedrooms", "2 Bathrooms", "Modular Kitchen", "Balcony", "Car Parking"] },
-  { type: "3 BHK Apartment", area: "1200–1450 sq.ft.", price: "₹58 Lac*", features: ["3 Bedrooms", "2 Bathrooms", "Large Living Room", "2 Balconies", "Car Parking"], popular: true },
-  { type: "Residential Plot", area: "100–300 sq.yd.", price: "₹48 Lac*", features: ["Freehold Property", "Demarcated Plots", "Wide Internal Roads", "All Civic Amenities", "Corner / Park Facing Available"] },
+  { type: "2 BHK Apartment", area: "850–1050 sq.ft.", price: "₹54.90 Lac*", features: ["2 Bedrooms", "2 Bathrooms", "Modular Kitchen", "Balcony", "Car Parking"] },
+  { type: "3 BHK Apartment", area: "1200–1450 sq.ft.", price: "₹64 Lac*", features: ["3 Bedrooms", "2 Bathrooms", "Large Living Room", "2 Balconies", "Car Parking"], popular: true },
+  { type: "Residential Plot", area: "100–300 sq.yd.", price: "₹54 Lac*", features: ["Freehold Property", "Demarcated Plots", "Wide Internal Roads", "All Civic Amenities", "Corner / Park Facing Available"] },
 ];
 
 const PricingSection = () => (

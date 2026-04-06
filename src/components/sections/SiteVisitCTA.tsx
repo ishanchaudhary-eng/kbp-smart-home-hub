@@ -3,16 +3,22 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import MathCaptcha from "@/components/MathCaptcha";
 
 const SiteVisitCTA = () => {
   const [formData, setFormData] = useState({ name: "", phone: "", date: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.phone) {
       toast({ title: "Please fill required fields", description: "Name and phone number are required.", variant: "destructive" });
+      return;
+    }
+    if (!captchaVerified) {
+      toast({ title: "Please solve the math question", variant: "destructive" });
       return;
     }
     setSubmitted(true);
@@ -51,6 +57,7 @@ const SiteVisitCTA = () => {
                   <Input placeholder="Your Name *" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required />
                   <Input placeholder="Phone Number *" type="tel" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} required />
                   <Input type="date" value={formData.date} onChange={(e) => setFormData({ ...formData, date: e.target.value })} className="text-muted-foreground" />
+                  <MathCaptcha onVerified={setCaptchaVerified} />
                   <Button type="submit" className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold text-base h-12 animate-pulse-gold">
                     Schedule Site Visit →
                   </Button>

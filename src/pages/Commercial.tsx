@@ -24,6 +24,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import ContactFooter from "@/components/sections/ContactFooter";
 import { useToast } from "@/hooks/use-toast";
+import MathCaptcha from "@/components/MathCaptcha";
+import commercialImg from "@/assets/Commercial.png";
 import {
   Accordion,
   AccordionContent,
@@ -44,12 +46,17 @@ interface ShopFormProps {
 const ShopForm = ({ title, buttonText, variant = "light", showBusiness = false, showBudget = false, showDate = false }: ShopFormProps) => {
   const [data, setData] = useState({ name: "", phone: "", business: "", budget: "", date: "" });
   const [done, setDone] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
   const { toast } = useToast();
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!data.name || !data.phone) {
       toast({ title: "Please fill required fields", description: "Name and phone are required.", variant: "destructive" });
+      return;
+    }
+    if (!captchaVerified) {
+      toast({ title: "Please solve the math question", variant: "destructive" });
       return;
     }
     setDone(true);
@@ -87,12 +94,13 @@ const ShopForm = ({ title, buttonText, variant = "light", showBusiness = false, 
         {showBudget && (
           <select value={data.budget} onChange={(e) => setData({ ...data, budget: e.target.value })} className={`w-full h-10 rounded-md border px-3 text-sm ${inp || "border-input bg-background"}`}>
             <option value="">Budget Range</option>
-            <option value="50-75">₹50 – 75 Lac</option>
-            <option value="75-100">₹75 Lac – 1 Cr</option>
+            <option value="50-82">₹50 – 82 Lac</option>
+            <option value="82-100">₹82 Lac – 1 Cr</option>
             <option value="100+">₹1 Cr+</option>
           </select>
         )}
         {showDate && <Input placeholder="Preferred Visit Date" type="date" value={data.date} onChange={(e) => setData({ ...data, date: e.target.value })} className={inp} />}
+        <MathCaptcha onVerified={setCaptchaVerified} inputClassName={inp} />
         <Button type="submit" className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold text-base h-12 animate-pulse-gold">{buttonText}</Button>
       </form>
       <p className="text-xs opacity-50 mt-2 text-center">We respect your privacy. No spam.</p>
@@ -150,7 +158,7 @@ const Commercial = () => (
     {/* ── S1 – HERO ── */}
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-navy-dark" />
-      <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-10" />
+      <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url(${commercialImg})` }} />
       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent" />
 
       <div className="container mx-auto px-4 relative z-10 py-12 md:py-20">
@@ -174,7 +182,7 @@ const Commercial = () => (
 
             <div className="bg-secondary/20 rounded-xl p-4 inline-block mb-6">
               <p className="text-primary-foreground/60 text-sm">Showrooms Starting From</p>
-              <p className="text-3xl font-bold text-secondary">₹75.9 Lakhs*</p>
+              <p className="text-3xl font-bold text-secondary">₹81.90 Lakhs*</p>
               <p className="text-primary-foreground/50 text-xs">*T&C Apply</p>
             </div>
 
@@ -343,7 +351,7 @@ const Commercial = () => (
                   <p className="font-bold text-foreground font-sans">Commercial Showrooms</p>
                   <p className="text-muted-foreground text-sm">Multiple sizes available</p>
                 </div>
-                <p className="text-2xl font-bold text-secondary">₹75.9 Lac*</p>
+                <p className="text-2xl font-bold text-secondary">₹81.90 Lac*</p>
               </div>
               <p className="text-xs text-muted-foreground">* Starting price. Contact us for detailed pricing based on shop size and location within the project.</p>
             </div>
