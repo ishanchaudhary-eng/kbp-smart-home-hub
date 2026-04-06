@@ -620,7 +620,7 @@ const Apartments = () => (
                     1200 – 1450 sq.ft.
                   </p>
                 </div>
-                <p className="text-2xl font-bold text-secondary">₹58 Lac*</p>
+                <p className="text-2xl font-bold text-secondary">₹64 Lac*</p>
               </div>
             </div>
 
