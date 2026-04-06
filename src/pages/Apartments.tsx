@@ -606,7 +606,7 @@ const Apartments = () => (
                     850 – 1050 sq.ft.
                   </p>
                 </div>
-                <p className="text-2xl font-bold text-secondary">₹48.9 Lac*</p>
+                <p className="text-2xl font-bold text-secondary">₹54.90 Lac*</p>
               </div>
               <div className="bg-card rounded-xl border border-secondary ring-2 ring-secondary/20 p-5 flex justify-between items-center relative overflow-hidden">
                 <div className="absolute top-0 right-0 bg-secondary text-secondary-foreground text-[10px] font-bold px-3 py-0.5 rounded-bl-lg">
