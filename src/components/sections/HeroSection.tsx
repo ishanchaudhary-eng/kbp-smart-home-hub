@@ -2,6 +2,7 @@ import { MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import LeadForm from "@/components/LeadForm";
+import villasImg from "@/assets/villas-exterior.webp";
 
 const HeroSection = () => {
   return (
