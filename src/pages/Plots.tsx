@@ -52,12 +52,17 @@ const PlotForm = ({
 }: PlotFormProps) => {
   const [data, setData] = useState({ name: "", phone: "", size: "", city: "", date: "" });
   const [done, setDone] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
   const { toast } = useToast();
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!data.name || !data.phone) {
       toast({ title: "Please fill required fields", description: "Name and phone are required.", variant: "destructive" });
+      return;
+    }
+    if (!captchaVerified) {
+      toast({ title: "Please solve the math question", variant: "destructive" });
       return;
     }
     setDone(true);
