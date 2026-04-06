@@ -84,6 +84,7 @@ const MiniForm = ({
 }: MiniFormProps) => {
   const [data, setData] = useState({ name: "", phone: "", type: "", date: "" });
   const [done, setDone] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
   const { toast } = useToast();
 
   const submit = (e: React.FormEvent) => {
@@ -94,6 +95,10 @@ const MiniForm = ({
         description: "Name and phone are required.",
         variant: "destructive",
       });
+      return;
+    }
+    if (!captchaVerified) {
+      toast({ title: "Please solve the math question", variant: "destructive" });
       return;
     }
     setDone(true);
