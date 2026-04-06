@@ -217,7 +217,7 @@ const Apartments = () => (
 
             <div className="bg-secondary/20 rounded-xl p-4 inline-block mb-6">
               <p className="text-primary-foreground/60 text-sm">Flats Starting From</p>
-              <p className="text-3xl font-bold text-secondary">₹48.9 Lakhs*</p>
+              <p className="text-3xl font-bold text-secondary">₹54.90 Lakhs*</p>
               <p className="text-primary-foreground/50 text-xs">*T&C Apply</p>
             </div>
 
