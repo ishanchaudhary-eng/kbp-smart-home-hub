@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import MathCaptcha from "@/components/MathCaptcha";
 
 interface LeadFormProps {
   title?: string;
@@ -14,12 +15,17 @@ interface LeadFormProps {
 const LeadForm = ({ title = "Get Instant Price List", buttonText = "Submit Enquiry", variant = "light", compact = false, className = "" }: LeadFormProps) => {
   const [formData, setFormData] = useState({ name: "", phone: "", email: "", interest: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.phone) {
       toast({ title: "Please fill required fields", description: "Name and phone number are required.", variant: "destructive" });
+      return;
+    }
+    if (!captchaVerified) {
+      toast({ title: "Please solve the math question", variant: "destructive" });
       return;
     }
     setSubmitted(true);
@@ -60,6 +66,7 @@ const LeadForm = ({ title = "Get Instant Price List", buttonText = "Submit Enqui
             <option value="villa">Villa</option>
           </select>
         )}
+        <MathCaptcha onVerified={setCaptchaVerified} inputClassName={inputClass} />
         <Button type="submit" className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold text-base h-12 animate-pulse-gold">
           {buttonText}
         </Button>
