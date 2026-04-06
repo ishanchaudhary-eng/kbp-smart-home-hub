@@ -99,6 +99,7 @@ const PlotForm = ({
         )}
         {showCity && <Input placeholder="City" value={data.city} onChange={(e) => setData({ ...data, city: e.target.value })} className={inp} />}
         {showDate && <Input placeholder="Preferred Visit Date" type="date" value={data.date} onChange={(e) => setData({ ...data, date: e.target.value })} className={inp} />}
+        <MathCaptcha onVerified={setCaptchaVerified} inputClassName={inp} />
         <Button type="submit" className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold text-base h-12 animate-pulse-gold">
           {buttonText}
         </Button>
