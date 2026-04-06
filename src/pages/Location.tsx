@@ -296,6 +296,7 @@ const Location = () => {
                       <Input placeholder="Your Name *" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required />
                       <Input placeholder="Phone Number *" type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} required />
                       <Input placeholder="Preferred Visit Time" value={form.time} onChange={(e) => setForm({ ...form, time: e.target.value })} />
+                      <MathCaptcha onVerified={setCaptchaVerified} />
                       <Button type="submit" className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold text-base h-12 animate-pulse-gold">
                         Book Site Visit →
                       </Button>
