@@ -174,7 +174,7 @@ const Commercial = () => (
 
             <div className="bg-secondary/20 rounded-xl p-4 inline-block mb-6">
               <p className="text-primary-foreground/60 text-sm">Showrooms Starting From</p>
-              <p className="text-3xl font-bold text-secondary">₹75.9 Lakhs*</p>
+              <p className="text-3xl font-bold text-secondary">₹81.90 Lakhs*</p>
               <p className="text-primary-foreground/50 text-xs">*T&C Apply</p>
             </div>
 
