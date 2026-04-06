@@ -343,7 +343,7 @@ const Commercial = () => (
                   <p className="font-bold text-foreground font-sans">Commercial Showrooms</p>
                   <p className="text-muted-foreground text-sm">Multiple sizes available</p>
                 </div>
-                <p className="text-2xl font-bold text-secondary">₹75.9 Lac*</p>
+                <p className="text-2xl font-bold text-secondary">₹81.90 Lac*</p>
               </div>
               <p className="text-xs text-muted-foreground">* Starting price. Contact us for detailed pricing based on shop size and location within the project.</p>
             </div>
