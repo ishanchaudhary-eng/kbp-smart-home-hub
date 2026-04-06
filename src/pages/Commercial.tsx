@@ -25,6 +25,7 @@ import { Input } from "@/components/ui/input";
 import ContactFooter from "@/components/sections/ContactFooter";
 import { useToast } from "@/hooks/use-toast";
 import MathCaptcha from "@/components/MathCaptcha";
+import commercialImg from "@/assets/Commercial.png";
 import {
   Accordion,
   AccordionContent,
