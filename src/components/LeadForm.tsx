@@ -38,7 +38,7 @@ const LeadForm = ({ title = "Get Instant Price List", buttonText = "Submit Enqui
   if (submitted) {
     return (
       <div className={`rounded-xl p-6 text-center ${bgClass} ${className}`}>
-        <div className="text-4xl mb-3">✅</div>
+        <div className="text-4xl mb-3"></div>
         <h3 className="text-xl font-bold font-display mb-2">Thank You!</h3>
         <p className="text-sm opacity-80">Our team will contact you within 30 minutes.</p>
       </div>

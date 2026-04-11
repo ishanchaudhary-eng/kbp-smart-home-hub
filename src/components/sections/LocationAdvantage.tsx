@@ -39,7 +39,7 @@ const LocationAdvantage = () => (
 
         {/* Map Placeholder */}
         <div className="bg-muted rounded-xl h-64 flex items-center justify-center border mb-6">
-          <p className="text-muted-foreground text-sm">📍 Google Map — Coming Soon</p>
+          <p className="text-muted-foreground text-sm"> Google Map — Coming Soon</p>
         </div>
 
         <div className="text-center">

@@ -103,7 +103,7 @@ const Location = () => {
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <div className="bg-muted rounded-xl h-72 flex items-center justify-center border">
-                <p className="text-muted-foreground text-sm">📍 Township Aerial View</p>
+                <p className="text-muted-foreground text-sm"> Township Aerial View</p>
               </div>
             </motion.div>
           </div>
@@ -135,7 +135,7 @@ const Location = () => {
             ))}
           </div>
           <div className="text-center">
-            <Badge variant="secondary" className="text-sm px-6 py-2">🛣️ Direct Access to NH-21 Highway</Badge>
+            <Badge variant="secondary" className="text-sm px-6 py-2"> Direct Access to NH-21 Highway</Badge>
           </div>
         </div>
       </section>
@@ -275,16 +275,16 @@ const Location = () => {
                 Explore the location and experience the township in person.
               </p>
               <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-center gap-2">✅ Free pickup & drop from Chandigarh</li>
-                <li className="flex items-center gap-2">✅ Expert guided tour</li>
-                <li className="flex items-center gap-2">✅ No obligation visit</li>
+                <li className="flex items-center gap-2"> Free pickup & drop from Chandigarh</li>
+                <li className="flex items-center gap-2"> Expert guided tour</li>
+                <li className="flex items-center gap-2"> No obligation visit</li>
               </ul>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
               {submitted ? (
                 <Card className="text-center">
                   <CardContent className="p-8">
-                    <div className="text-4xl mb-3">✅</div>
+                    <div className="text-4xl mb-3"></div>
                     <h3 className="text-xl font-bold font-display mb-2 text-foreground">Visit Booked!</h3>
                     <p className="text-sm text-muted-foreground">Our team will confirm your visit shortly.</p>
                   </CardContent>

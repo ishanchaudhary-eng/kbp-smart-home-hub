@@ -70,7 +70,7 @@ const ShopForm = ({ title, buttonText, variant = "light", showBusiness = false, 
   if (done)
     return (
       <div className={`rounded-xl p-6 text-center ${bg}`}>
-        <div className="text-4xl mb-3">✅</div>
+        <div className="text-4xl mb-3"></div>
         <h3 className="text-xl font-bold font-display mb-2">Thank You!</h3>
         <p className="text-sm opacity-80">Our team will contact you within 30 minutes.</p>
       </div>
@@ -166,7 +166,7 @@ const Commercial = () => (
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="inline-block bg-secondary/20 text-secondary px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-              🏪 Commercial at KBP Smart City
+               Commercial at KBP Smart City
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground leading-tight mb-4">
               Commercial Shops Near Chandigarh
@@ -177,7 +177,7 @@ const Commercial = () => (
 
             <div className="flex flex-wrap gap-3 mb-6">
               {["Prime Highway Location", "Township Footfall", "Investment Opportunity"].map((t) => (
-                <span key={t} className="bg-secondary/20 text-secondary text-xs font-bold px-3 py-1.5 rounded-full">✅ {t}</span>
+                <span key={t} className="bg-secondary/20 text-secondary text-xs font-bold px-3 py-1.5 rounded-full"> {t}</span>
               ))}
             </div>
 

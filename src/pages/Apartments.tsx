@@ -124,7 +124,7 @@ const MiniForm = ({
   if (done)
     return (
       <div className={`rounded-xl p-6 text-center ${bg}`}>
-        <div className="text-4xl mb-3">✅</div>
+        <div className="text-4xl mb-3"></div>
         <h3 className="text-xl font-bold font-display mb-2">Thank You!</h3>
         <p className="text-sm opacity-80">
           Our team will contact you within 30 minutes.
@@ -208,7 +208,7 @@ const Apartments = () => (
             transition={{ duration: 0.7 }}
           >
             <div className="inline-block bg-secondary/20 text-secondary px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-              🏢 Apartments at KBP Smart City
+               Apartments at KBP Smart City
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground leading-tight mb-4">
               Modern Apartments Near Chandigarh
@@ -672,9 +672,9 @@ const Apartments = () => (
               and amenities.
             </p>
             <div className="flex flex-wrap gap-4 text-primary-foreground/60 text-sm">
-              <span className="flex items-center gap-1">✅ Free Pick & Drop</span>
-              <span className="flex items-center gap-1">✅ Guided Tour</span>
-              <span className="flex items-center gap-1">✅ No Obligation</span>
+              <span className="flex items-center gap-1"> Free Pick & Drop</span>
+              <span className="flex items-center gap-1"> Guided Tour</span>
+              <span className="flex items-center gap-1"> No Obligation</span>
             </div>
           </motion.div>
 
