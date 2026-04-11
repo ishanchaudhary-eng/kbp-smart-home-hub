@@ -25,6 +25,7 @@ import ContactFooter from "@/components/sections/ContactFooter";
 import { useToast } from "@/hooks/use-toast";
 import MathCaptcha from "@/components/MathCaptcha";
 import apartmentImg from "@/assets/2_BHK.jpeg";
+import apartmentImg2 from "@/assets/2_BHK-2.jpeg";
 
 /* ───── highlight cards data ───── */
 const highlights = [
@@ -457,11 +458,11 @@ const Apartments = () => (
             comfortable living environments.
           </p>
           <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
-            <div className="bg-card rounded-2xl border h-56 flex items-center justify-center">
-              <p className="text-muted-foreground">2 BHK Floor Plan</p>
+            <div className="bg-card rounded-2xl border overflow-hidden h-56">
+              <img src={apartmentImg} alt="2 BHK Apartment" className="w-full h-full object-cover" />
             </div>
-            <div className="bg-card rounded-2xl border h-56 flex items-center justify-center">
-              <p className="text-muted-foreground">3 BHK Floor Plan</p>
+            <div className="bg-card rounded-2xl border overflow-hidden h-56">
+              <img src={apartmentImg2} alt="3 BHK Apartment" className="w-full h-full object-cover" />
             </div>
           </div>
           <Button

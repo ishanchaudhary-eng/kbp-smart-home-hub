@@ -32,6 +32,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import villaInteriorImg from "@/assets/Independent_Villa-2.jpeg";
 
 /* ───── FORM COMPONENT ───── */
 interface PlotFormProps {
@@ -163,7 +164,7 @@ const Plots = () => (
     {/* ── S1 – HERO ── */}
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-navy-dark" />
-      <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-10" />
+      <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url(${villaInteriorImg})` }} />
       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent" />
 
       <div className="container mx-auto px-4 relative z-10 py-12 md:py-20">

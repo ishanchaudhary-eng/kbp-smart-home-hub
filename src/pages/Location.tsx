@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 import MathCaptcha from "@/components/MathCaptcha";
+import villasImg from "@/assets/villas-exterior.webp";
 
 const connectivityData = [
   { city: "Chandigarh", time: "~25 min", icon: Building2 },
@@ -61,7 +62,7 @@ const Location = () => {
     <main className="pt-16 md:pt-20">
       {/* HERO */}
       <section className="relative py-24 md:py-32 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/placeholder.svg')] opacity-5 bg-cover bg-center" />
+        <div className="absolute inset-0 bg-cover bg-center opacity-15" style={{ backgroundImage: `url(${villasImg})` }} />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <Badge variant="secondary" className="mb-4 text-sm px-4 py-1">Strategic Location</Badge>
