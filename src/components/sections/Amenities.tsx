@@ -34,7 +34,7 @@ const Amenities = () => (
         ))}
       </div>
       <div className="text-center mt-8">
-        <Button variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold h-12 px-8">
+        <Button variant="outline" className="border-secondary text-secondary bg-transparent hover:bg-secondary/10 font-semibold h-12 px-8">
           View All Amenities
         </Button>
       </div>

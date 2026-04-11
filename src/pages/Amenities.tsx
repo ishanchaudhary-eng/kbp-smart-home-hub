@@ -192,7 +192,7 @@ const Amenities = () => (
               <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold text-base h-12 px-8 animate-pulse-gold" onClick={() => document.getElementById("amenity-site-visit")?.scrollIntoView({ behavior: "smooth" })}>
                 Book Site Visit
               </Button>
-              <Button variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-bold text-base h-12 px-8" onClick={() => document.getElementById("amenity-hero-form")?.scrollIntoView({ behavior: "smooth" })}>
+              <Button variant="outline" className="border-secondary text-secondary bg-transparent hover:bg-secondary/10 font-bold text-base h-12 px-8" onClick={() => document.getElementById("amenity-hero-form")?.scrollIntoView({ behavior: "smooth" })}>
                 Get Brochure
               </Button>
             </div>
