@@ -124,7 +124,7 @@ const MiniForm = ({
   if (done)
     return (
       <div className={`rounded-xl p-6 text-center ${bg}`}>
-        <div className="text-4xl mb-3"></div>
+        <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-3"><Check className="w-6 h-6 text-secondary" /></div>
         <h3 className="text-xl font-bold font-display mb-2">Thank You!</h3>
         <p className="text-sm opacity-80">
           Our team will contact you within 30 minutes.

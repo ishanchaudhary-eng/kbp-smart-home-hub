@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Clock, GraduationCap, Hospital, ShoppingBag, TrendingUp, Car, Building2, Utensils, Landmark, Bus, Phone } from "lucide-react";
+import { MapPin, Clock, GraduationCap, Hospital, ShoppingBag, TrendingUp, Car, Building2, Utensils, Landmark, Bus, Phone } , Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -284,7 +284,7 @@ const Location = () => {
               {submitted ? (
                 <Card className="text-center">
                   <CardContent className="p-8">
-                    <div className="text-4xl mb-3"></div>
+                    <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-3"><Check className="w-6 h-6 text-secondary" /></div>
                     <h3 className="text-xl font-bold font-display mb-2 text-foreground">Visit Booked!</h3>
                     <p className="text-sm text-muted-foreground">Our team will confirm your visit shortly.</p>
                   </CardContent>
