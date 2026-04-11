@@ -26,6 +26,7 @@ import ContactFooter from "@/components/sections/ContactFooter";
 import { useToast } from "@/hooks/use-toast";
 import MathCaptcha from "@/components/MathCaptcha";
 import commercialImg from "@/assets/Commercial.png";
+import commercialImg2 from "@/assets/Commercial-2.png";
 import {
   Accordion,
   AccordionContent,
