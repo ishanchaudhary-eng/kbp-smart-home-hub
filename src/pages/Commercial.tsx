@@ -182,9 +182,7 @@ const Commercial = () => (
             </div>
 
             <div className="bg-secondary/20 rounded-xl p-4 inline-block mb-6">
-              <p className="text-primary-foreground/60 text-sm">Showrooms Starting From</p>
-              <p className="text-3xl font-bold text-secondary">₹81.90 Lakhs*</p>
-              <p className="text-primary-foreground/50 text-xs">*T&C Apply</p>
+              <p className="text-3xl font-bold text-secondary">Request Latest Price Sheet</p>
             </div>
 
             <div className="flex flex-wrap gap-3">
@@ -352,9 +350,9 @@ const Commercial = () => (
                   <p className="font-bold text-foreground font-sans">Commercial Showrooms</p>
                   <p className="text-muted-foreground text-sm">Multiple sizes available</p>
                 </div>
-                <p className="text-2xl font-bold text-secondary">₹81.90 Lac*</p>
+                <p className="text-lg font-semibold text-secondary">Request for Price</p>
               </div>
-              <p className="text-xs text-muted-foreground">* Starting price. Contact us for detailed pricing based on shop size and location within the project.</p>
+              <p className="text-xs text-muted-foreground">Contact us for detailed pricing based on shop size and location within the project.</p>
             </div>
           </motion.div>
 

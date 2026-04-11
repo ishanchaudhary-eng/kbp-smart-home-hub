@@ -224,9 +224,7 @@ const Apartments = () => (
             </div>
 
             <div className="bg-secondary/20 rounded-xl p-4 inline-block mb-6">
-              <p className="text-primary-foreground/60 text-sm">Flats Starting From</p>
-              <p className="text-3xl font-bold text-secondary">₹54.90 Lakhs*</p>
-              <p className="text-primary-foreground/50 text-xs">*T&C Apply</p>
+              <p className="text-3xl font-bold text-secondary">Request Latest Price Sheet</p>
             </div>
 
             <div className="flex flex-wrap gap-3">
@@ -610,7 +608,7 @@ const Apartments = () => (
                     850 – 1050 sq.ft.
                   </p>
                 </div>
-                <p className="text-2xl font-bold text-secondary">₹54.90 Lac*</p>
+                <p className="text-lg font-semibold text-secondary">Request for Price</p>
               </div>
               <div className="bg-card rounded-xl border border-secondary ring-2 ring-secondary/20 p-5 flex justify-between items-center relative overflow-hidden">
                 <div className="absolute top-0 right-0 bg-secondary text-secondary-foreground text-[10px] font-bold px-3 py-0.5 rounded-bl-lg">
@@ -624,7 +622,7 @@ const Apartments = () => (
                     1200 – 1450 sq.ft.
                   </p>
                 </div>
-                <p className="text-2xl font-bold text-secondary">₹64 Lac*</p>
+                <p className="text-lg font-semibold text-secondary">Request for Price</p>
               </div>
             </div>
 
