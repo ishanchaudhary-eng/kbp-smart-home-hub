@@ -244,7 +244,7 @@ const Location = () => {
           </motion.div>
           <div className="rounded-xl overflow-hidden border shadow-lg mb-8">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27388.5!2d76.65!3d30.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed0be66ec96b%3A0xa5ff67f9527319fe!2sKharar%2C%20Punjab!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3427.0428152070303!2d76.59927669999999!3d30.801433599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ffb3efaa62543%3A0x41b31c5fcad45ac0!2sKBP%20Smart%20City%20-%20Best%202BHK%20Flats%20in%20Kharar%20%7C%20Commercial%20Plots!5e0!3m2!1sen!2sin!4v1775484283051!5m2!1sen!2sin"
               width="100%"
               height="400"
               style={{ border: 0 }}

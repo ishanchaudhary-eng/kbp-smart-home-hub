@@ -26,6 +26,10 @@ import { useToast } from "@/hooks/use-toast";
 import MathCaptcha from "@/components/MathCaptcha";
 import apartmentImg from "@/assets/2_BHK.jpeg";
 import apartmentImg2 from "@/assets/2_BHK-2.jpeg";
+import floorPlan2bhk from "@/assets/2bhk-floor-plan.webp";
+import floorPlan3bhk from "@/assets/3bhk-floor-plan.webp";
+import apartmentExterior1 from "@/assets/apartment-exterior-1.webp";
+import apartmentExterior2 from "@/assets/apartment-exterior-2.webp";
 
 /* ───── highlight cards data ───── */
 const highlights = [
@@ -322,10 +326,8 @@ const Apartments = () => (
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gradient-to-br from-card to-muted rounded-2xl border h-64 md:h-80 flex items-center justify-center">
-              <p className="text-muted-foreground">
-                Floor Plan — 2 BHK Apartment
-              </p>
+            <div className="rounded-2xl border overflow-hidden h-64 md:h-80">
+              <img src={floorPlan2bhk} alt="2 BHK Floor Plan" className="w-full h-full object-contain bg-white" />
             </div>
           </motion.div>
           <motion.div
@@ -429,10 +431,8 @@ const Apartments = () => (
             viewport={{ once: true }}
             className="order-1 lg:order-2"
           >
-            <div className="bg-gradient-to-br from-card to-muted rounded-2xl border h-64 md:h-80 flex items-center justify-center">
-              <p className="text-muted-foreground">
-                Floor Plan — 3 BHK Apartment
-              </p>
+            <div className="rounded-2xl border overflow-hidden h-64 md:h-80">
+              <img src={floorPlan3bhk} alt="3 BHK Floor Plan" className="w-full h-full object-contain bg-white" />
             </div>
           </motion.div>
         </div>
@@ -459,10 +459,10 @@ const Apartments = () => (
           </p>
           <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
             <div className="bg-card rounded-2xl border overflow-hidden h-56">
-              <img src={apartmentImg} alt="2 BHK Apartment" className="w-full h-full object-cover" />
+              <img src={apartmentExterior1} alt="Apartment Building View 1" className="w-full h-full object-cover" />
             </div>
             <div className="bg-card rounded-2xl border overflow-hidden h-56">
-              <img src={apartmentImg2} alt="3 BHK Apartment" className="w-full h-full object-cover" />
+              <img src={apartmentExterior2} alt="Apartment Building View 2" className="w-full h-full object-cover" />
             </div>
           </div>
           <Button
