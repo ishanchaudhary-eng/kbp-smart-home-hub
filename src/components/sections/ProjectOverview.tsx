@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import townshipImg from "@/assets/apartment-exterior-1.webp";
 
 const ProjectOverview = () => (
   <section id="overview" className="py-20">
@@ -26,7 +27,7 @@ const ProjectOverview = () => (
 
         <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
           <div className="rounded-2xl h-80 md:h-96 overflow-hidden">
-            <img src="/township-drone.webp" alt="KBP Smart City Township Aerial View" className="w-full h-full object-cover" />
+            <img src={townshipImg} alt="KBP Smart City Township Aerial View" className="w-full h-full object-cover" />
           </div>
         </motion.div>
       </div>
