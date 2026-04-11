@@ -93,12 +93,11 @@ const ShopForm = ({ title, buttonText, variant = "light", showBusiness = false, 
           </select>
         )}
         {showBudget && (
-          <select value={data.budget} onChange={(e) => setData({ ...data, budget: e.target.value })} className={`w-full h-10 rounded-md border px-3 text-sm ${inp || "border-input bg-background"}`}>
-            <option value="">Budget Range</option>
-            <option value="50-82">₹50 – 82 Lac</option>
-            <option value="82-100">₹82 Lac – 1 Cr</option>
-            <option value="100+">₹1 Cr+</option>
-          </select>
+            <select value={data.budget} onChange={(e) => setData({ ...data, budget: e.target.value })} className={`w-full h-10 rounded-md border px-3 text-sm ${inp || "border-input bg-background"}`}>
+              <option value="">Budget Range</option>
+              <option value="under-1cr">Under 1 Cr</option>
+              <option value="1cr-plus">1 Cr+</option>
+            </select>
         )}
         {showDate && <Input placeholder="Preferred Visit Date" type="date" value={data.date} onChange={(e) => setData({ ...data, date: e.target.value })} className={inp} />}
         <MathCaptcha onVerified={setCaptchaVerified} inputClassName={inp} />
@@ -182,9 +181,7 @@ const Commercial = () => (
             </div>
 
             <div className="bg-secondary/20 rounded-xl p-4 inline-block mb-6">
-              <p className="text-primary-foreground/60 text-sm">Showrooms Starting From</p>
-              <p className="text-3xl font-bold text-secondary">₹81.90 Lakhs*</p>
-              <p className="text-primary-foreground/50 text-xs">*T&C Apply</p>
+              <p className="text-3xl font-bold text-secondary">Request Latest Price Sheet</p>
             </div>
 
             <div className="flex flex-wrap gap-3">
@@ -352,9 +349,9 @@ const Commercial = () => (
                   <p className="font-bold text-foreground font-sans">Commercial Showrooms</p>
                   <p className="text-muted-foreground text-sm">Multiple sizes available</p>
                 </div>
-                <p className="text-2xl font-bold text-secondary">₹81.90 Lac*</p>
+                <p className="text-lg font-semibold text-secondary">Request for Price</p>
               </div>
-              <p className="text-xs text-muted-foreground">* Starting price. Contact us for detailed pricing based on shop size and location within the project.</p>
+              <p className="text-xs text-muted-foreground">Contact us for detailed pricing based on shop size and location within the project.</p>
             </div>
           </motion.div>
 

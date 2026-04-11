@@ -4,17 +4,17 @@ import { Button } from "@/components/ui/button";
 import LeadForm from "@/components/LeadForm";
 
 const pricingData = [
-  { type: "2 BHK Apartment", area: "850–1050 sq.ft.", price: "₹54.90 Lac*", features: ["2 Bedrooms", "2 Bathrooms", "Modular Kitchen", "Balcony", "Car Parking"] },
-  { type: "3 BHK Apartment", area: "1200–1450 sq.ft.", price: "₹64 Lac*", features: ["3 Bedrooms", "2 Bathrooms", "Large Living Room", "2 Balconies", "Car Parking"], popular: true },
-  { type: "Residential Plot", area: "100–300 sq.yd.", price: "₹54 Lac*", features: ["Freehold Property", "Demarcated Plots", "Wide Internal Roads", "All Civic Amenities", "Corner / Park Facing Available"] },
+  { type: "2 BHK Apartment", area: "850–1050 sq.ft.", features: ["2 Bedrooms", "2 Bathrooms", "Modular Kitchen", "Balcony", "Car Parking"] },
+  { type: "3 BHK Apartment", area: "1200–1450 sq.ft.", features: ["3 Bedrooms", "2 Bathrooms", "Large Living Room", "2 Balconies", "Car Parking"], popular: true },
+  { type: "Residential Plot", area: "100–300 sq.yd.", features: ["Freehold Property", "Demarcated Plots", "Wide Internal Roads", "All Civic Amenities", "Corner / Park Facing Available"] },
 ];
 
 const PricingSection = () => (
   <section id="pricing" className="py-20">
     <div className="container mx-auto px-4">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-        <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Transparent Pricing</span>
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Affordable Pricing Options</h2>
+        <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Pricing</span>
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Request Latest Price Sheet</h2>
         <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
           KBP Smart City offers competitively priced homes and plots, making it one of the most affordable township developments near Chandigarh.
         </p>
@@ -38,7 +38,7 @@ const PricingSection = () => (
             <div className="p-6">
               <h3 className="text-lg font-bold text-foreground font-sans">{item.type}</h3>
               <p className="text-muted-foreground text-sm mb-3">{item.area}</p>
-              <p className="text-3xl font-bold text-secondary mb-4">{item.price}</p>
+              <p className="text-lg font-semibold text-secondary mb-4">Request for Latest Price</p>
               <ul className="space-y-2">
                 {item.features.map((f) => (
                   <li key={f} className="flex items-center gap-2 text-sm text-muted-foreground">
