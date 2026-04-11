@@ -93,12 +93,11 @@ const ShopForm = ({ title, buttonText, variant = "light", showBusiness = false, 
           </select>
         )}
         {showBudget && (
-          <select value={data.budget} onChange={(e) => setData({ ...data, budget: e.target.value })} className={`w-full h-10 rounded-md border px-3 text-sm ${inp || "border-input bg-background"}`}>
-            <option value="">Budget Range</option>
-            <option value="50-82">₹50 – 82 Lac</option>
-            <option value="82-100">₹82 Lac – 1 Cr</option>
-            <option value="100+">₹1 Cr+</option>
-          </select>
+            <select value={data.budget} onChange={(e) => setData({ ...data, budget: e.target.value })} className={`w-full h-10 rounded-md border px-3 text-sm ${inp || "border-input bg-background"}`}>
+              <option value="">Budget Range</option>
+              <option value="under-1cr">Under 1 Cr</option>
+              <option value="1cr-plus">1 Cr+</option>
+            </select>
         )}
         {showDate && <Input placeholder="Preferred Visit Date" type="date" value={data.date} onChange={(e) => setData({ ...data, date: e.target.value })} className={inp} />}
         <MathCaptcha onVerified={setCaptchaVerified} inputClassName={inp} />
