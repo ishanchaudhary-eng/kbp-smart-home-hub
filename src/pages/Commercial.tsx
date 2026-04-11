@@ -376,7 +376,7 @@ const Commercial = () => (
               <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold h-12 px-8" onClick={() => document.getElementById("comm-visit-form")?.scrollIntoView({ behavior: "smooth" })}>
                 Book Site Visit
               </Button>
-              <Button variant="outline" className="font-bold h-12 px-8" onClick={() => (window.location.href = "tel:+918699366993")}>
+              <Button variant="outline" className="font-bold h-12 px-8" onClick={() => (window.location.href = "tel:+917837393955")}>
                 Talk To Sales Team
               </Button>
             </div>
