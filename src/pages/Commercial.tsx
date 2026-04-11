@@ -206,7 +206,7 @@ const Commercial = () => (
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Why Invest</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Why Invest In Shops At KBP Smart City</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Why Invest Here</h2>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {whyInvest.map((w, i) => (
@@ -227,7 +227,7 @@ const Commercial = () => (
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Business Types</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Perfect For Multiple Business Types</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Suitable Business Types</h2>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {businessTypes.map((b, i) => (
@@ -249,7 +249,7 @@ const Commercial = () => (
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Advantages</span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2 mb-6">Why Businesses Thrive Here</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2 mb-6">Commercial Advantages</h2>
             <ul className="space-y-4 mb-8">
               {advantages.map((a) => (
                 <li key={a} className="flex items-center gap-3 text-foreground">
@@ -275,7 +275,7 @@ const Commercial = () => (
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Location</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Strong Location Advantage</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Location</h2>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {locationPoints.map((lp, i) => (
@@ -291,7 +291,7 @@ const Commercial = () => (
           ))}
         </div>
         <p className="text-center text-muted-foreground text-sm max-w-2xl mx-auto mb-6">
-          Excellent connectivity ensures regular customer movement and strong business potential.
+          Well connected to Mohali, Chandigarh and nearby towns via NH-21.
         </p>
         <div className="text-center">
           <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold h-12 px-8" onClick={() => (window.location.href = "/location")}>
@@ -307,7 +307,7 @@ const Commercial = () => (
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Investment</span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mt-2 mb-4">Smart Commercial Investment</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mt-2 mb-4">Investment Potential</h2>
             <p className="text-primary-foreground/70 mb-6">
               Commercial properties in developing townships often benefit from increasing population and rising demand for retail and services.
             </p>

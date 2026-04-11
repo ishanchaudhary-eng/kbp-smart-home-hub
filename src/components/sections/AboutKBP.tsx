@@ -10,7 +10,7 @@ const AboutKBP = () => (
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">The Developer</span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2 mb-6">About KBP Group</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            KBP Group has years of experience in real estate development and has delivered multiple residential and commercial projects. The group focuses on creating quality developments with strong infrastructure and long term value for buyers.
+            Established real estate developer with 30+ years in Punjab. Multiple residential and commercial projects delivered.
           </p>
           <Link to="/about">
             <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold h-12 px-8">

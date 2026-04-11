@@ -13,7 +13,7 @@ const PropertyOptions = () => (
     <div className="container mx-auto px-4">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
         <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Property Types</span>
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Choose Your Ideal Property</h2>
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Property Types Available</h2>
       </motion.div>
       <div className="grid md:grid-cols-3 gap-6">
         {options.map((opt, i) => (

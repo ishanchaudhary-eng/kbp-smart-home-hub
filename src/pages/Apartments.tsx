@@ -282,13 +282,10 @@ const Apartments = () => (
             Why Buy Here
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">
-            Perfect Homes For Modern Families
+            About The Apartments
           </h2>
           <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
-            KBP Smart City apartments are designed to provide comfortable living
-            spaces for families. The layouts are thoughtfully planned to maximize
-            space, natural light and ventilation while keeping affordability in
-            mind.
+            2 BHK and 3 BHK apartments with practical layouts, natural light and ventilation.
           </p>
         </motion.div>
 
@@ -449,11 +446,10 @@ const Apartments = () => (
             Floor Plans
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2 mb-3">
-            Smart Floor Plan Designs
+            Floor Plans
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            Each apartment is carefully planned to provide functional spaces and
-            comfortable living environments.
+            Functional layouts for 2 BHK and 3 BHK configurations.
           </p>
           <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
             <div className="bg-card rounded-2xl border overflow-hidden h-56">

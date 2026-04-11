@@ -16,7 +16,7 @@ const Amenities = () => (
     <div className="container mx-auto px-4">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
         <span className="text-secondary font-semibold text-sm uppercase tracking-wider">World-Class Living</span>
-        <h2 className="text-3xl md:text-4xl font-display font-bold mt-2">Lifestyle Amenities For Your Family</h2>
+        <h2 className="text-3xl md:text-4xl font-display font-bold mt-2">Township Amenities</h2>
       </motion.div>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto">
         {amenities.map((a, i) => (

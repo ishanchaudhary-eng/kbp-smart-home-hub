@@ -16,7 +16,7 @@ const About = () => (
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Our Legacy</span>
           <h1 className="text-4xl md:text-5xl font-display font-bold mt-2 mb-4">About KBP Group</h1>
-          <p className="text-primary-foreground/70 max-w-2xl mx-auto text-lg">Three decades of trust, quality, and commitment to building homes that families love.</p>
+          <p className="text-primary-foreground/70 max-w-2xl mx-auto text-lg">Established real estate developer with 30+ years in Punjab.</p>
         </motion.div>
       </div>
     </section>
@@ -27,7 +27,7 @@ const About = () => (
           <div>
             <h2 className="text-3xl font-display font-bold text-foreground mb-6">Our Story</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">Founded in 1994, KBP Group has grown from a small construction firm to one of Punjab's most respected real estate developers. With over 30 years of experience, we have delivered 50+ residential and commercial projects across the state.</p>
-            <p className="text-muted-foreground leading-relaxed">Our philosophy is simple — build homes that we'd be proud to live in ourselves. Every project reflects our commitment to quality construction, transparent dealings, and customer satisfaction.</p>
+            <p className="text-muted-foreground leading-relaxed">Every project reflects a commitment to quality construction, transparent dealings and customer satisfaction.</p>
           </div>
           <div className="bg-gradient-to-br from-primary to-navy-light rounded-2xl h-72 flex items-center justify-center">
             <img src="/kbp-logo.png" alt="KBP Group Logo" className="w-48 opacity-80" />
