@@ -75,7 +75,7 @@ const Location = () => {
               <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold h-12 px-8 text-base">
                 Get Location Details
               </Button>
-              <Button variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 h-12 px-8 text-base"
+              <Button variant="outline" className="border-secondary text-secondary bg-transparent hover:bg-secondary/10 h-12 px-8 text-base"
                 onClick={() => document.getElementById("site-visit-form")?.scrollIntoView({ behavior: "smooth" })}>
                 Book Site Visit
               </Button>

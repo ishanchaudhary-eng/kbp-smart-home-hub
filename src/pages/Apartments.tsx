@@ -237,7 +237,7 @@ const Apartments = () => (
               </Button>
               <Button
                 variant="outline"
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-bold text-base h-12 px-8"
+                className="border-secondary text-secondary bg-transparent hover:bg-secondary/10 font-bold text-base h-12 px-8"
                 onClick={() =>
                   document
                     .getElementById("apt-site-visit")
