@@ -19,7 +19,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
           >
             <div className="inline-block bg-secondary/20 text-secondary px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-               New Launch — Book Now
+              Book Now
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground leading-tight mb-4">
               Affordable Homes Near Chandigarh
