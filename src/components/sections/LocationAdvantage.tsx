@@ -37,9 +37,18 @@ const LocationAdvantage = () => (
           ))}
         </div>
 
-        {/* Map Placeholder */}
-        <div className="bg-muted rounded-xl h-64 flex items-center justify-center border mb-6">
-          <p className="text-muted-foreground text-sm"> Google Map — Coming Soon</p>
+        {/* Google Map */}
+        <div className="rounded-xl overflow-hidden border mb-6">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3427.0428152070303!2d76.59927669999999!3d30.801433599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ffb3efaa62543%3A0x41b31c5fcad45ac0!2sKBP%20Smart%20City%20-%20Best%202BHK%20Flats%20in%20Kharar%20%7C%20Commercial%20Plots!5e0!3m2!1sen!2sin!4v1775484283051!5m2!1sen!2sin"
+            width="100%"
+            height="300"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="KBP Smart City Location"
+          />
         </div>
 
         <div className="text-center">

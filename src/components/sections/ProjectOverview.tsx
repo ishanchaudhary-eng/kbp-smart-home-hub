@@ -25,8 +25,8 @@ const ProjectOverview = () => (
         </motion.div>
 
         <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-          <div className="bg-gradient-to-br from-primary to-navy-light rounded-2xl h-80 md:h-96 flex items-center justify-center">
-            <p className="text-primary-foreground/40 text-sm">Township Image — Coming Soon</p>
+          <div className="rounded-2xl h-80 md:h-96 overflow-hidden">
+            <img src="/township-drone.webp" alt="KBP Smart City Township Aerial View" className="w-full h-full object-cover" />
           </div>
         </motion.div>
       </div>
