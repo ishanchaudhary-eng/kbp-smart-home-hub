@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import floorPlan2bhk from "@/assets/2bhk-floor-plan.webp";
+import floorPlan3bhk from "@/assets/3bhk-floor-plan.webp";
 
 const plans = [
   { type: "2 BHK", area: "850–1050 sq.ft.", bedrooms: "2", bathrooms: "2", balcony: "1" },
@@ -36,8 +38,8 @@ const FloorPlans = () => {
 
         <motion.div key={active} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl mx-auto">
           <div className="bg-card border rounded-2xl overflow-hidden shadow-sm">
-            <div className="h-64 md:h-80 bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center">
-              <p className="text-muted-foreground">Floor Plan Image — {plans[active].type}</p>
+            <div className="h-64 md:h-80">
+              <img src={active === 0 ? floorPlan2bhk : floorPlan3bhk} alt={`${plans[active].type} Floor Plan`} className="w-full h-full object-contain bg-white" />
             </div>
             <div className="p-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div>
