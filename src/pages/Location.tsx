@@ -71,7 +71,7 @@ const Location = () => {
               Prime Location Near <span className="text-secondary">Chandigarh</span>
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto mb-8">
-              KBP Smart City is strategically located on the NH-21 Kharar–Kurali Highway offering excellent connectivity to Chandigarh, Mohali and surrounding towns.
+              Located on NH-21 Kharar–Kurali Highway with direct access to Chandigarh, Mohali and surrounding towns.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold h-12 px-8 text-base">
@@ -93,13 +93,13 @@ const Location = () => {
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Location Overview</span>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2 mb-6">
-                Strategically Located For Easy Connectivity
+                Location Overview
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                KBP Smart City enjoys a prime location on the NH-21 Kharar–Kurali Highway, one of the fastest growing real estate corridors near Chandigarh. The project offers excellent connectivity to major cities, educational institutions, healthcare facilities and commercial hubs.
+                Located on NH-21 Kharar–Kurali Highway, one of the fastest growing corridors near Chandigarh. Well connected to major cities, educational institutions, healthcare and commercial hubs.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Whether you work in Chandigarh, Mohali or nearby industrial areas, the location ensures convenient travel and a well connected lifestyle.
+                Convenient commute to Chandigarh, Mohali and nearby industrial areas.
               </p>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -163,7 +163,7 @@ const Location = () => {
             ))}
           </div>
           <p className="text-muted-foreground text-center max-w-2xl mx-auto">
-            The project is surrounded by reputed educational institutions, making it an ideal choice for families with children and students.
+            Multiple educational institutions within short driving distance.
           </p>
         </div>
       </section>
@@ -190,7 +190,7 @@ const Location = () => {
             ))}
           </div>
           <p className="text-muted-foreground text-center max-w-2xl mx-auto">
-            Quality healthcare facilities are easily accessible within short driving distance from the township.
+            Hospitals accessible within short driving distance.
           </p>
         </div>
       </section>
@@ -200,7 +200,7 @@ const Location = () => {
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Convenience</span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Everything You Need Nearby</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Daily Conveniences</h2>
           </motion.div>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {conveniences.map((c, i) => (
@@ -215,7 +215,7 @@ const Location = () => {
             ))}
           </div>
           <p className="text-muted-foreground text-center max-w-2xl mx-auto">
-            Residents can enjoy convenient access to everyday essentials and services.
+            Shopping, markets, restaurants, banks and public transport nearby.
           </p>
         </div>
       </section>
@@ -225,12 +225,9 @@ const Location = () => {
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mx-auto text-center">
             <TrendingUp className="w-12 h-12 text-secondary mx-auto mb-4" />
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Growing Real Estate Corridor</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Area Growth Potential</h2>
             <p className="text-primary-foreground/80 text-lg leading-relaxed mb-4">
-              The Kharar–Kurali highway corridor is rapidly developing with new residential projects, commercial hubs and infrastructure developments. Property values in this region are expected to grow steadily as connectivity and infrastructure continue to improve.
-            </p>
-            <p className="text-primary-foreground/80 text-lg leading-relaxed">
-              This makes KBP Smart City not only a great place to live but also a smart investment opportunity.
+              The Kharar–Kurali highway corridor is developing with new residential projects, commercial hubs and infrastructure. Property values in this region are expected to grow as connectivity improves.
             </p>
           </motion.div>
         </div>

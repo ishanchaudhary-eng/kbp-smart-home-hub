@@ -204,7 +204,7 @@ const Plots = () => (
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Why Buy Here</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Why Buyers Prefer Plots at KBP Smart City</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Why Buy a Plot Here</h2>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((b, i) => (
@@ -225,7 +225,7 @@ const Plots = () => (
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Trust & Security</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Buy With Greater Confidence</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Trust & Transparency</h2>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
           {trustCards.map((t, i) => (
@@ -238,7 +238,7 @@ const Plots = () => (
             </motion.div>
           ))}
         </div>
-        <p className="text-center text-muted-foreground text-sm">Designed to reduce uncertainty for genuine home buyers and investors.</p>
+        <p className="text-center text-muted-foreground text-sm">Clear documentation and financing support for buyers.</p>
       </div>
     </section>
 
@@ -250,7 +250,7 @@ const Plots = () => (
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Ideal Buyers</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Perfect for Different Buyer Needs</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Who Should Buy</h2>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
           {audienceCards.map((a, i) => (
@@ -272,7 +272,7 @@ const Plots = () => (
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Location</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Well Connected Yet Peaceful</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Location Advantage</h2>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {locationPoints.map((lp, i) => (
@@ -303,7 +303,7 @@ const Plots = () => (
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Comparison</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Why Many Buyers Still Prefer Plots</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Plots vs Flats</h2>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
@@ -330,7 +330,7 @@ const Plots = () => (
         </div>
 
         <p className="text-center text-muted-foreground text-sm max-w-2xl mx-auto">
-          At KBP Smart City, buyers get the benefit of plotted ownership inside a planned township ecosystem.
+          Plotted ownership inside a planned township with shared infrastructure.
         </p>
       </div>
     </section>

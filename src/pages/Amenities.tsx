@@ -114,16 +114,16 @@ const AmenityForm = ({ title, buttonText, variant = "light", showInterest = fals
 
 /* ───── DATA ───── */
 const lifestyleAmenities = [
-  { icon: Fence, title: "Excellent Gated Community", text: "A more secure and organized environment for families." },
-  { icon: PartyPopper, title: "Club House", text: "A shared lifestyle space for recreation and community engagement." },
-  { icon: Baby, title: "Kids Play Area", text: "Safe and fun outdoor space for children." },
-  { icon: Footprints, title: "Jogging / Walking Track", text: "Daily wellness and movement within the township." },
-  { icon: Flower2, title: "Yoga / Meditation Square", text: "A calm space for mental well-being and peaceful routines." },
-  { icon: Gamepad2, title: "Indoor Badminton Court", text: "Active indoor recreation for residents." },
-  { icon: Dumbbell, title: "Gymnasium", text: "Fitness support for a healthier lifestyle." },
-  { icon: Trees, title: "Theme Park & Amenities Zone", text: "Designed to bring more leisure value to township living." },
-  { icon: PersonStanding, title: "Elderly Sit-Out Area", text: "Comfortable dedicated spaces for senior family members." },
-  { icon: Wind, title: "40% Open Area", text: "Better breathing space, openness and a less crowded living environment." },
+  { icon: Fence, title: "Excellent Gated Community", text: "Controlled entry and organized township environment." },
+  { icon: PartyPopper, title: "Club House", text: "Shared space for recreation and community events." },
+  { icon: Baby, title: "Kids Play Area", text: "Outdoor play space for children." },
+  { icon: Footprints, title: "Jogging / Walking Track", text: "Track within the township." },
+  { icon: Flower2, title: "Yoga / Meditation Square", text: "Quiet space for wellness routines." },
+  { icon: Gamepad2, title: "Indoor Badminton Court", text: "Indoor sports facility." },
+  { icon: Dumbbell, title: "Gymnasium", text: "Fitness facility for residents." },
+  { icon: Trees, title: "Theme Park & Amenities Zone", text: "Leisure and activity area." },
+  { icon: PersonStanding, title: "Elderly Sit-Out Area", text: "Dedicated spaces for senior residents." },
+  { icon: Wind, title: "40% Open Area", text: "Open green space across the township." },
 ];
 
 const infraFeatures = [
@@ -138,10 +138,10 @@ const infraFeatures = [
 ];
 
 const familyCards = [
-  { icon: Baby, title: "For Children", text: "Play areas and open spaces for healthier growing years." },
-  { icon: Briefcase, title: "For Working Parents", text: "Security, connectivity and daily convenience in one township." },
-  { icon: Heart, title: "For Elders", text: "Peaceful corners, walking space and a calmer environment." },
-  { icon: Smile, title: "For Everyone", text: "A balanced lifestyle with recreation, safety and green breathing space." },
+  { icon: Baby, title: "For Children", text: "Play areas and open spaces." },
+  { icon: Briefcase, title: "For Working Parents", text: "Security, connectivity and daily convenience." },
+  { icon: Heart, title: "For Elders", text: "Walking space and quiet sit-out zones." },
+  { icon: Smile, title: "For Everyone", text: "Recreation, safety and green space." },
 ];
 
 const locationPoints = [
@@ -178,10 +178,10 @@ const Amenities = () => (
                Township Amenities
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground leading-tight mb-4">
-              Amenities That Make Everyday Living Better
+              Township Amenities & Facilities
             </h1>
             <p className="text-primary-foreground/80 text-lg mb-6">
-              A thoughtfully planned township with comfort, security, recreation and open spaces for the whole family.
+              Gated township with recreation, security and open spaces.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-6">
@@ -212,12 +212,9 @@ const Amenities = () => (
       <div className="container mx-auto px-4 max-w-3xl text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">About The Township</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2 mb-6">A Township Designed For Real Family Living</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2 mb-6">About The Township</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            At KBP Smart City, amenities are not just add-ons. They are part of a better everyday lifestyle. The township is planned to offer the comfort, safety and open environment that modern families look for while still staying within an affordable range.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            Whether it is children needing open play space, elders wanting peaceful sit-out zones, or working families wanting security and convenience, the amenities are designed to support all age groups.
+            KBP Smart City includes amenities for daily comfort, safety and recreation. The township has play areas for children, sit-out zones for elders, fitness facilities and 40% open space.
           </p>
         </motion.div>
       </div>
@@ -251,7 +248,7 @@ const Amenities = () => (
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Infrastructure</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Comfort Backed By Strong Infrastructure</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Township Infrastructure</h2>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {infraFeatures.map((f, i) => (
@@ -274,7 +271,7 @@ const Amenities = () => (
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Family Living</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Why Families Will Feel At Home Here</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Designed For All Age Groups</h2>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {familyCards.map((c, i) => (
@@ -303,9 +300,9 @@ const Amenities = () => (
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Green Living</span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2 mb-4">More Open Space, Better Living</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2 mb-4">40% Open Area</h2>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              KBP Smart City highlights a unique layout with 40% open area, helping create a more breathable and comfortable township environment. Wide roads, green zones and activity spaces make daily life feel less congested and more livable.
+              40% of the township is open space with wide roads, green zones and activity areas.
             </p>
             <div className="grid grid-cols-2 gap-4">
               {openSpacePoints.map((p) => (
@@ -330,7 +327,7 @@ const Amenities = () => (
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Connectivity</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Comfort Inside, Connectivity Outside</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Connectivity</h2>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {locationPoints.map((lp, i) => (
@@ -346,7 +343,7 @@ const Amenities = () => (
           ))}
         </div>
         <p className="text-center text-muted-foreground text-sm max-w-2xl mx-auto mb-6">
-          KBP Smart City combines internal family-friendly amenities with strong external connectivity, making it easier to enjoy both peace and convenience.
+          Direct road access to Mohali, Chandigarh and nearby towns.
         </p>
         <div className="text-center">
           <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold h-12 px-8" onClick={() => (window.location.href = "/location")}>
@@ -361,12 +358,12 @@ const Amenities = () => (
       <div className="container mx-auto px-4 max-w-3xl text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Buyer Insight</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mt-2 mb-6">Why Amenities Influence Better Buying Decisions</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mt-2 mb-6">Why Amenities Matter</h2>
           <p className="text-primary-foreground/70 leading-relaxed mb-4">
-            When buyers choose a home, they are not only choosing a unit. They are choosing their daily environment. Amenities such as children's play areas, walking tracks, green space, clubhouse access and stronger security improve everyday quality of life and long-term satisfaction.
+            Amenities like play areas, walking tracks, green space and security add to everyday quality of life and long-term property value.
           </p>
           <p className="text-primary-foreground/70 leading-relaxed mb-8">
-            For families, this also adds to the project's livability and future value.
+            Important for families choosing where to live.
           </p>
           <AmenityForm title="Get Township Brochure" buttonText="Send Me Details →" showInterest variant="dark" />
         </motion.div>
@@ -379,9 +376,9 @@ const Amenities = () => (
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Visit Us</span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2 mb-4">See The Lifestyle In Person</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2 mb-4">Visit The Township</h2>
             <p className="text-muted-foreground mb-6 text-lg">
-              Walk through the township, understand the layout and explore how the amenities are planned for family living.
+              Walk through the township and see the amenities in person.
             </p>
             <div className="flex flex-wrap gap-3">
               <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold h-12 px-8" onClick={() => document.getElementById("amenity-visit-form")?.scrollIntoView({ behavior: "smooth" })}>
