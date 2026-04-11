@@ -43,6 +43,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import villaInteriorImg from "@/assets/Independent_Villa-2.jpeg";
 
 /* ───── FORM ───── */
 interface AmenityFormProps {
