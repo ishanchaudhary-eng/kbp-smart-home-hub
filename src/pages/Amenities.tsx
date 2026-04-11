@@ -81,7 +81,7 @@ const AmenityForm = ({ title, buttonText, variant = "light", showInterest = fals
   if (done)
     return (
       <div className={`rounded-xl p-6 text-center ${bg}`}>
-        <div className="text-4xl mb-3">✅</div>
+        <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-3"><Check className="w-6 h-6 text-secondary" /></div>
         <h3 className="text-xl font-bold font-display mb-2">Thank You!</h3>
         <p className="text-sm opacity-80">Our team will contact you within 30 minutes.</p>
       </div>
@@ -175,7 +175,7 @@ const Amenities = () => (
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="inline-block bg-secondary/20 text-secondary px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-              🌳 Township Amenities
+               Township Amenities
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground leading-tight mb-4">
               Amenities That Make Everyday Living Better
@@ -186,7 +186,7 @@ const Amenities = () => (
 
             <div className="flex flex-wrap gap-3 mb-6">
               {["Gated Community", "40% Open Area", "Clubhouse", "Family-Friendly Amenities"].map((t) => (
-                <span key={t} className="bg-secondary/20 text-secondary text-xs font-bold px-3 py-1.5 rounded-full">✅ {t}</span>
+                <span key={t} className="bg-secondary/20 text-secondary text-xs font-bold px-3 py-1.5 rounded-full"> {t}</span>
               ))}
             </div>
 

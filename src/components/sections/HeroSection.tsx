@@ -19,7 +19,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
           >
             <div className="inline-block bg-secondary/20 text-secondary px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-              🏗️ New Launch — Book Now
+               New Launch — Book Now
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground leading-tight mb-4">
               Affordable Homes Near Chandigarh
@@ -57,9 +57,9 @@ const HeroSection = () => {
 
             {/* Trust Badges */}
             <div className="flex flex-wrap gap-4 text-primary-foreground/60 text-sm">
-              <span className="flex items-center gap-1">✅ 30+ Years Experience</span>
-              <span className="flex items-center gap-1">✅ Gated Township</span>
-              <span className="flex items-center gap-1">✅ On 200ft Highway</span>
+              <span className="flex items-center gap-1"> 30+ Years Experience</span>
+              <span className="flex items-center gap-1"> Gated Township</span>
+              <span className="flex items-center gap-1"> On 200ft Highway</span>
             </div>
           </motion.div>
 
