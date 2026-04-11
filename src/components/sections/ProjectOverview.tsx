@@ -12,13 +12,10 @@ const ProjectOverview = () => (
             Welcome To KBP Smart City
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            KBP Smart City is a thoughtfully planned township designed for modern living near Chandigarh. Located on the Kharar–Kurali Highway, the project offers a perfect balance of connectivity, affordability and lifestyle.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            Whether you are looking for your first home, an investment property or a commercial opportunity, KBP Smart City provides options that suit different needs and budgets.
+            KBP Smart City is a township on the Kharar–Kurali Highway near Chandigarh. It includes apartments, residential plots and commercial spaces with parks, open areas and modern amenities.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            The township offers well planned apartments, residential plots and commercial spaces surrounded by parks, open areas and modern amenities.
+            Options available for first-time home buyers, investors and businesses.
           </p>
           <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold h-12 px-8">
             Download Brochure

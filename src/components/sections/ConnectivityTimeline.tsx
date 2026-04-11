@@ -72,11 +72,8 @@ const ConnectivityTimeline = () => (
           Connectivity
         </span>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">
-          Unmatched Connectivity
+          Connectivity
         </h2>
-        <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
-          KBP Smart City puts you minutes away from everything that matters.
-        </p>
       </motion.div>
 
       {/* === DESKTOP HORIZONTAL TIMELINE === */}
@@ -208,14 +205,10 @@ const ConnectivityTimeline = () => (
         className="max-w-3xl mx-auto"
       >
         <h3 className="text-2xl font-display font-bold text-foreground mb-4">
-          Excellent Connectivity That Makes Daily Life Easier
+          Connectivity From KBP Smart City
         </h3>
         <p className="text-muted-foreground leading-relaxed mb-6">
-          KBP Smart City enjoys a highly strategic location with seamless access
-          to major destinations across the Tricity region. Situated right next to
-          the Bharatmala Expressway network, the project provides excellent road
-          connectivity for residents commuting to Mohali, Chandigarh and nearby
-          towns.
+          Located next to the Bharatmala Expressway on NH-21, with direct road access to Mohali, Chandigarh and nearby towns.
         </p>
 
         <div className="space-y-4 mb-6">
@@ -232,10 +225,6 @@ const ConnectivityTimeline = () => (
           ))}
         </div>
 
-        <p className="text-muted-foreground leading-relaxed mb-8">
-          This excellent connectivity makes KBP Smart City a convenient location
-          for both end users and property investors.
-        </p>
 
         <div className="text-center">
           <Button

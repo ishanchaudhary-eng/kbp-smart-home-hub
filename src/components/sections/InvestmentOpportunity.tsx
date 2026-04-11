@@ -14,7 +14,7 @@ const InvestmentOpportunity = () => (
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
         <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Smart Investment</span>
         <h2 className="text-3xl md:text-4xl font-display font-bold mt-2">Investment Opportunity</h2>
-        <p className="text-primary-foreground/70 mt-3 max-w-2xl mx-auto">KBP Smart City is not just a home — it's a smart investment for your future.</p>
+        
       </motion.div>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {points.map((p, i) => (
