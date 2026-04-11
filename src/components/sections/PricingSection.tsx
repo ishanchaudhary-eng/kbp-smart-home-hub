@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import LeadForm from "@/components/LeadForm";
 
 const pricingData = [
-  { type: "2 BHK Apartment", area: "850–1050 sq.ft.", features: ["2 Bedrooms", "2 Bathrooms", "Modular Kitchen", "Balcony", "Car Parking"] },
-  { type: "3 BHK Apartment", area: "1200–1450 sq.ft.", features: ["3 Bedrooms", "2 Bathrooms", "Large Living Room", "2 Balconies", "Car Parking"], popular: true },
-  { type: "Residential Plot", area: "100–300 sq.yd.", features: ["Freehold Property", "Demarcated Plots", "Wide Internal Roads", "All Civic Amenities", "Corner / Park Facing Available"] },
+  { type: "2 BHK Apartment", features: ["2 Bedrooms", "2 Bathrooms", "Modular Kitchen", "Balcony", "Car Parking"] },
+  { type: "3 BHK Apartment", features: ["3 Bedrooms", "2 Bathrooms", "Large Living Room", "2 Balconies", "Car Parking"], popular: true },
+  { type: "Residential Plot", features: ["Freehold Property", "Demarcated Plots", "Wide Internal Roads", "All Civic Amenities", "Corner / Park Facing Available"] },
 ];
 
 const PricingSection = () => (
@@ -36,8 +36,7 @@ const PricingSection = () => (
               </div>
             )}
             <div className="p-6">
-              <h3 className="text-lg font-bold text-foreground font-sans">{item.type}</h3>
-              <p className="text-muted-foreground text-sm mb-3">{item.area}</p>
+              <h3 className="text-lg font-bold text-foreground font-sans mb-3">{item.type}</h3>
               <p className="text-lg font-semibold text-secondary mb-4">Request for Latest Price</p>
               <ul className="space-y-2">
                 {item.features.map((f) => (

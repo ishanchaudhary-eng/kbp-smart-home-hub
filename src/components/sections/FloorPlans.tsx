@@ -5,8 +5,8 @@ import floorPlan2bhk from "@/assets/2bhk-floor-plan.webp";
 import floorPlan3bhk from "@/assets/3bhk-floor-plan.webp";
 
 const plans = [
-  { type: "2 BHK", area: "850–1050 sq.ft.", bedrooms: "2", bathrooms: "2", balcony: "1" },
-  { type: "3 BHK", area: "1200–1450 sq.ft.", bedrooms: "3", bathrooms: "2", balcony: "2" },
+  { type: "2 BHK", bedrooms: "2", bathrooms: "2", balcony: "1" },
+  { type: "3 BHK", bedrooms: "3", bathrooms: "2", balcony: "2" },
 ];
 
 const FloorPlans = () => {
@@ -41,14 +41,10 @@ const FloorPlans = () => {
             <div className="h-64 md:h-80">
               <img src={active === 0 ? floorPlan2bhk : floorPlan3bhk} alt={`${plans[active].type} Floor Plan`} className="w-full h-full object-contain bg-white" />
             </div>
-            <div className="p-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div className="p-6 grid grid-cols-3 gap-4 text-center">
               <div>
                 <p className="text-2xl font-bold text-foreground">{plans[active].type}</p>
                 <p className="text-muted-foreground text-sm">Type</p>
-              </div>
-              <div>
-                <p className="text-2xl font-bold text-foreground">{plans[active].area}</p>
-                <p className="text-muted-foreground text-sm">Super Area</p>
               </div>
               <div>
                 <p className="text-2xl font-bold text-foreground">{plans[active].bedrooms}</p>

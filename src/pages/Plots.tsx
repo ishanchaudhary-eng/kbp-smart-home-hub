@@ -39,7 +39,7 @@ interface PlotFormProps {
   title: string;
   buttonText: string;
   variant?: "light" | "dark";
-  showPlotSize?: boolean;
+  
   showCity?: boolean;
   showDate?: boolean;
 }
@@ -48,7 +48,7 @@ const PlotForm = ({
   title,
   buttonText,
   variant = "light",
-  showPlotSize = false,
+  
   showCity = false,
   showDate = false,
 }: PlotFormProps) => {
@@ -91,14 +91,8 @@ const PlotForm = ({
       <form onSubmit={submit} className="space-y-3">
         <Input placeholder="Your Name *" value={data.name} onChange={(e) => setData({ ...data, name: e.target.value })} className={inp} required />
         <Input placeholder="Phone Number *" type="tel" value={data.phone} onChange={(e) => setData({ ...data, phone: e.target.value })} className={inp} required />
-        {showPlotSize && (
-          <select value={data.size} onChange={(e) => setData({ ...data, size: e.target.value })} className={`w-full h-10 rounded-md border px-3 text-sm ${inp || "border-input bg-background"}`}>
-            <option value="">Plot Size Interest</option>
-            <option value="80">80 Sq. Yards</option>
-            <option value="93">93 Sq. Yards</option>
-            <option value="100">100 Sq. Yards</option>
-          </select>
-        )}
+
+
         {showCity && <Input placeholder="City" value={data.city} onChange={(e) => setData({ ...data, city: e.target.value })} className={inp} />}
         {showDate && <Input placeholder="Preferred Visit Date" type="date" value={data.date} onChange={(e) => setData({ ...data, date: e.target.value })} className={inp} />}
         <MathCaptcha onVerified={setCaptchaVerified} inputClassName={inp} />
@@ -126,11 +120,8 @@ const trustCards = [
   { icon: Banknote, title: "Bank Loan Available", text: "Financing support available for eligible buyers." },
 ];
 
-const plotOptions = [
-  { size: "80 Sq. Yards", desc: "Suitable for compact family homes and budget-conscious buyers.", badge: "Best for first-time buyers" },
-  { size: "93 Sq. Yards", desc: "Balanced option for practical layouts and growing families.", badge: "Popular choice", popular: true },
-  { size: "100 Sq. Yards", desc: "Ideal for buyers wanting more frontage, comfort and future flexibility.", badge: "More spacious option" },
-];
+
+
 
 const audienceCards = [
   { icon: Home, text: "Families planning their own home" },
@@ -153,7 +144,7 @@ const flatPros = ["Ready-to-move convenience", "Shared maintenance", "Less custo
 const faqs = [
   { q: "Are registry options available?", a: "Yes, immediate registry is available for qualified buyers. The land is fully registered and legal documentation is transparent." },
   { q: "Is bank loan available?", a: "Yes, bank loan options are available for eligible buyers. Our team can guide you through the financing process." },
-  { q: "Which plot sizes are available?", a: "KBP Smart City offers plots in 80, 93 and 100 sq. yard configurations to suit different budgets and requirements." },
+  { q: "Which plot sizes are available?", a: "Multiple plot configurations are available. Contact our team for the latest availability." },
   { q: "Is the location suitable for investment?", a: "The Kharar–Kurali highway corridor is one of the fastest-growing real estate zones near Chandigarh, making it attractive for both self-use and investment." },
   { q: "Can I visit the site before booking?", a: "Absolutely. We encourage all buyers to visit the site. You can schedule a free site visit through our website or by calling our sales team." },
 ];
@@ -202,7 +193,7 @@ const Plots = () => (
           </motion.div>
 
           <motion.div id="plot-hero-form" initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
-            <PlotForm title="Get Plot Price List" buttonText="Submit Enquiry" showPlotSize variant="light" />
+            <PlotForm title="Get Plot Price List" buttonText="Submit Enquiry" variant="light" />
           </motion.div>
         </div>
       </div>
@@ -251,32 +242,8 @@ const Plots = () => (
       </div>
     </section>
 
-    {/* ── S4 – PLOT OPTIONS ── */}
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-          <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Plot Sizes</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Choose the Plot Size That Fits Your Plan</h2>
-        </motion.div>
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          {plotOptions.map((p, i) => (
-            <motion.div key={p.size} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-              className={`bg-card rounded-2xl border overflow-hidden ${p.popular ? "border-secondary ring-2 ring-secondary/20 shadow-lg relative" : ""}`}
-            >
-              {p.popular && <div className="bg-secondary text-secondary-foreground text-xs font-bold text-center py-1.5">MOST POPULAR</div>}
-              <div className="p-6 text-center">
-                <span className="inline-block bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-full mb-3">{p.badge}</span>
-                <h3 className="text-2xl font-bold text-foreground font-sans mb-2">{p.size}</h3>
-                <p className="text-muted-foreground text-sm mb-6">{p.desc}</p>
-                <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold" onClick={() => document.getElementById("plot-price-form")?.scrollIntoView({ behavior: "smooth" })}>
-                  Get Price for This Plot
-                </Button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
+
+
 
     {/* ── S5 – IDEAL FOR ── */}
     <section className="py-20 bg-muted">
@@ -378,21 +345,17 @@ const Plots = () => (
             <p className="text-muted-foreground mb-8">
               Get the latest pricing, availability and plot size details directly from our sales team.
             </p>
-            <div className="space-y-4">
-              {plotOptions.map((p) => (
-                <div key={p.size} className={`bg-card rounded-xl border p-5 flex justify-between items-center ${p.popular ? "border-secondary ring-1 ring-secondary/20" : ""}`}>
-                  <div>
-                    <p className="font-bold text-foreground font-sans">{p.size}</p>
-                    <p className="text-muted-foreground text-xs">{p.badge}</p>
-                  </div>
-                  <span className="text-secondary font-bold text-sm">Get Price →</span>
-                </div>
-              ))}
+            <div className="bg-card rounded-xl border p-5 flex justify-between items-center">
+              <div>
+                <p className="font-bold text-foreground font-sans">Residential Plots</p>
+                <p className="text-muted-foreground text-xs">Multiple configurations available</p>
+              </div>
+              <span className="text-secondary font-bold text-sm">Get Price →</span>
             </div>
           </motion.div>
 
           <motion.div id="plot-price-form" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <PlotForm title="Send Me Plot Details" buttonText="Send Me Plot Details →" showPlotSize showCity />
+            <PlotForm title="Send Me Plot Details" buttonText="Send Me Plot Details →" showCity />
           </motion.div>
         </div>
       </div>
