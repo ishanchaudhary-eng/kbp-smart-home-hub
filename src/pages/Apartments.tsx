@@ -604,9 +604,6 @@ const Apartments = () => (
                   <p className="font-bold text-foreground font-sans">
                     2 BHK Apartment
                   </p>
-                  <p className="text-muted-foreground text-sm">
-                    850 – 1050 sq.ft.
-                  </p>
                 </div>
                 <p className="text-lg font-semibold text-secondary">Request for Price</p>
               </div>
@@ -617,9 +614,6 @@ const Apartments = () => (
                 <div>
                   <p className="font-bold text-foreground font-sans">
                     3 BHK Apartment
-                  </p>
-                  <p className="text-muted-foreground text-sm">
-                    1200 – 1450 sq.ft.
                   </p>
                 </div>
                 <p className="text-lg font-semibold text-secondary">Request for Price</p>
