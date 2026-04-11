@@ -44,6 +44,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import villaInteriorImg from "@/assets/Independent_Villa-2.jpeg";
+import greenSpaceImg from "@/assets/green-space.webp";
 
 /* ───── FORM ───── */
 interface AmenityFormProps {
@@ -316,8 +317,8 @@ const Amenities = () => (
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <div className="bg-gradient-to-br from-card to-muted rounded-2xl border h-64 md:h-80 flex items-center justify-center">
-              <p className="text-muted-foreground">Township Green Area Visual</p>
+            <div className="rounded-2xl border overflow-hidden h-64 md:h-80">
+              <img src={greenSpaceImg} alt="KBP Smart City Green Open Space" className="w-full h-full object-cover" />
             </div>
           </motion.div>
         </div>
