@@ -25,14 +25,18 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10 py-12 md:py-20">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           {/* Big Logo */}
-          <motion.img
-            src="/kbp-logo.png"
-            alt="KBP Smart City"
-            className="h-32 md:h-48 lg:h-56 w-auto mb-8"
+          <motion.div
+            className="bg-white rounded-2xl p-5 md:p-8 shadow-2xl mb-8"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7 }}
-          />
+          >
+            <img
+              src="/kbp-logo.png"
+              alt="KBP Smart City"
+              className="h-24 md:h-36 lg:h-44 w-auto"
+            />
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
