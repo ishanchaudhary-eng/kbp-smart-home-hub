@@ -53,10 +53,7 @@ const FloorPlans = () => {
         </div>
 
         <motion.div key={active} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl mx-auto">
-          <motion.div
-            className="bg-card border rounded-2xl overflow-hidden shadow-sm"
-            whileHover={{ shadow: "0 25px 50px -12px rgba(0,0,0,0.15)" }}
-          >
+          <div className="bg-card border rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
             <div className="h-64 md:h-80">
               <img src={active === 0 ? floorPlan2bhk : floorPlan3bhk} alt={`${plans[active].type} Floor Plan`} className="w-full h-full object-contain bg-white" />
             </div>
