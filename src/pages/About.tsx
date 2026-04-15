@@ -32,7 +32,9 @@ const About = () => (
             <p className="text-muted-foreground leading-relaxed">Every project reflects a commitment to quality construction, transparent dealings and customer satisfaction.</p>
           </div>
           <div className="bg-gradient-to-br from-primary to-navy-light rounded-2xl h-72 flex items-center justify-center">
-            <img src="/kbp-group-logo.png" alt="KBP Group Logo" className="w-48" />
+            <div className="bg-white rounded-2xl p-6 shadow-lg">
+              <img src="/kbp-group-logo.png" alt="KBP Group Logo" className="w-40" />
+            </div>
           </div>
         </div>
 

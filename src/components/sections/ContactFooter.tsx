@@ -8,7 +8,9 @@ const ContactFooter = () => (
       <div className="grid lg:grid-cols-3 gap-12">
         {/* Contact Info */}
         <div>
-          <img src="/kbp-logo.png" alt="KBP Smart City" className="h-16 mb-6 brightness-200" />
+          <div className="bg-white rounded-xl p-3 inline-block mb-6">
+            <img src="/kbp-group-logo.png" alt="KBP Group" className="h-14" />
+          </div>
           <p className="text-primary-foreground/70 mb-6 text-sm leading-relaxed">
             Township by KBP Group on NH-205 Kharar–Kurali Highway. Apartments, plots, villas and commercial spaces.
           </p>
