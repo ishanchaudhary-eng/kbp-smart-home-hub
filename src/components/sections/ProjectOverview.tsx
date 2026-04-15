@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import townshipImg from "@/assets/apartment-exterior-1.webp";
+import MotionBackground from "@/components/MotionBackground";
 
 const ProjectOverview = () => (
-  <section id="overview" className="py-20">
-    <div className="container mx-auto px-4">
+  <section id="overview" className="py-20 relative overflow-hidden">
+    <MotionBackground variant="lines" />
+    <div className="container mx-auto px-4 relative z-10">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Project Overview</span>

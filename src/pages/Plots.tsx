@@ -109,7 +109,7 @@ const PlotForm = ({
 const benefits = [
   { icon: PenTool, title: "Freedom to Build", text: "Design and build your home the way your family needs." },
   { icon: TrendingUp, title: "Safer Land-Backed Investment", text: "Plots offer long-term value and flexibility for end users and investors." },
-  { icon: Route, title: "Prime Highway Connectivity", text: "Located on NH-21 with easy access to Mohali, Chandigarh and nearby towns." },
+  { icon: Route, title: "Prime Highway Connectivity", text: "Located on NH-205 with easy access to Mohali, Chandigarh and nearby towns." },
   { icon: Shield, title: "Township Advantage", text: "Enjoy plotted ownership inside a planned gated development." },
 ];
 
@@ -168,7 +168,7 @@ const Plots = () => (
               Residential Plots Near Chandigarh for Your Dream Home
             </h1>
             <p className="text-primary-foreground/80 text-lg mb-2">
-              Secure plotted development at KBP Smart City on NH-21 Kharar–Kurali Highway
+              Secure plotted development at KBP Smart City on NH-205 Kharar–Kurali Highway
             </p>
             <p className="text-primary-foreground/60 mb-6">
               Build the home you want in a well-connected township with strong future potential.

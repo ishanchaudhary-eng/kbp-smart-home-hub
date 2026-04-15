@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Home, LandPlot, Store } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import MotionBackground from "@/components/MotionBackground";
 
 const options = [
   { icon: Home, title: "Apartments", desc: "2 BHK and 3 BHK modern apartments designed for comfortable family living." },
@@ -9,8 +10,9 @@ const options = [
 ];
 
 const PropertyOptions = () => (
-  <section id="properties" className="py-20">
-    <div className="container mx-auto px-4">
+  <section id="properties" className="py-20 relative overflow-hidden">
+    <MotionBackground variant="blobs" />
+    <div className="container mx-auto px-4 relative z-10">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
         <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Property Types</span>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Property Types Available</h2>

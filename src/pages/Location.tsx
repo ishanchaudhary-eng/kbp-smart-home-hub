@@ -71,7 +71,7 @@ const Location = () => {
               Prime Location Near <span className="text-secondary">Chandigarh</span>
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto mb-8">
-              Located on NH-21 Kharar–Kurali Highway with direct access to Chandigarh, Mohali and surrounding towns.
+              Located on NH-205 Kharar–Kurali Highway with direct access to Chandigarh, Mohali and surrounding towns.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold h-12 px-8 text-base">
@@ -96,7 +96,7 @@ const Location = () => {
                 Location Overview
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Located on NH-21 Kharar–Kurali Highway, one of the fastest growing corridors near Chandigarh. Well connected to major cities, educational institutions, healthcare and commercial hubs.
+                Located on NH-205 Kharar–Kurali Highway, one of the fastest growing corridors near Chandigarh. Well connected to major cities, educational institutions, healthcare and commercial hubs.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Convenient commute to Chandigarh, Mohali and nearby industrial areas.
@@ -136,7 +136,7 @@ const Location = () => {
             ))}
           </div>
           <div className="text-center">
-            <Badge variant="secondary" className="text-sm px-6 py-2"> Direct Access to NH-21 Highway</Badge>
+            <Badge variant="secondary" className="text-sm px-6 py-2"> Direct Access to NH-205 Highway</Badge>
           </div>
         </div>
       </section>

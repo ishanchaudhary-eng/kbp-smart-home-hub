@@ -110,7 +110,7 @@ const ShopForm = ({ title, buttonText, variant = "light", showBusiness = false, 
 
 /* ───── DATA ───── */
 const whyInvest = [
-  { icon: Eye, title: "Highway Visibility", text: "Located on NH-21 providing strong visibility for businesses." },
+  { icon: Eye, title: "Highway Visibility", text: "Located on NH-205 providing strong visibility for businesses." },
   { icon: Users, title: "Growing Township", text: "Residential population inside the township ensures daily footfall." },
   { icon: TrendingUp, title: "Investment Potential", text: "Commercial shops can generate rental income and long-term appreciation." },
   { icon: MapPin, title: "Strategic Location", text: "Well connected to Mohali, Chandigarh and nearby towns." },
@@ -291,7 +291,7 @@ const Commercial = () => (
           ))}
         </div>
         <p className="text-center text-muted-foreground text-sm max-w-2xl mx-auto mb-6">
-          Well connected to Mohali, Chandigarh and nearby towns via NH-21.
+          Well connected to Mohali, Chandigarh and nearby towns via NH-205.
         </p>
         <div className="text-center">
           <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold h-12 px-8" onClick={() => (window.location.href = "/location")}>

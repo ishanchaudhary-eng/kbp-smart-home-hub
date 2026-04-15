@@ -208,7 +208,7 @@ const ConnectivityTimeline = () => (
           Connectivity From KBP Smart City
         </h3>
         <p className="text-muted-foreground leading-relaxed mb-6">
-          Located next to the Bharatmala Expressway on NH-21, with direct road access to Mohali, Chandigarh and nearby towns.
+          Located next to the Bharatmala Expressway on NH-205, with direct road access to Mohali, Chandigarh and nearby towns.
         </p>
 
         <div className="space-y-4 mb-6">

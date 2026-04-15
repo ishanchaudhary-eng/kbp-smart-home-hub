@@ -1,16 +1,18 @@
 import { Route, IndianRupee, Building2, TreePine } from "lucide-react";
 import { motion } from "framer-motion";
+import MotionBackground from "@/components/MotionBackground";
 
 const highlights = [
-  { icon: Route, title: "Highway Connectivity", desc: "Located on the 200 ft wide NH-21 highway connecting Chandigarh, Kharar and Kurali." },
+  { icon: Route, title: "Highway Connectivity", desc: "Located on the 200 ft wide NH-205 highway connecting Chandigarh, Kharar and Kurali." },
   { icon: IndianRupee, title: "Affordable Housing", desc: "Perfect for middle-class families looking for their first home near Chandigarh." },
   { icon: Building2, title: "Complete Township", desc: "Apartments, plots, villas and commercial spaces in one integrated development." },
   { icon: TreePine, title: "Peaceful Living", desc: "Green surroundings, parks and family friendly environment." },
 ];
 
 const QuickHighlights = () => (
-  <section className="py-16 bg-warm-gray">
-    <div className="container mx-auto px-4">
+  <section className="py-16 bg-warm-gray relative overflow-hidden">
+    <MotionBackground variant="dots" />
+    <div className="container mx-auto px-4 relative z-10">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
         <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Key Highlights</h2>
       </motion.div>

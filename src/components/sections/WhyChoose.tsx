@@ -5,7 +5,7 @@ const reasons = [
   { icon: Award, title: "30+ Years Experience", desc: "KBP Group is a trusted name in real estate with three decades of excellence." },
   { icon: Building2, title: "Delivered Projects", desc: "Multiple successful projects delivered on time across Punjab." },
   { icon: ShieldCheck, title: "Secure Gated Township", desc: "Round-the-clock security with CCTV and gated entry for your peace of mind." },
-  { icon: TrendingUp, title: "High Appreciation", desc: "Strategic location on NH-21 ensures excellent returns on investment." },
+  { icon: TrendingUp, title: "High Appreciation", desc: "Strategic location on NH-205 ensures excellent returns on investment." },
   { icon: Landmark, title: "Modern Infrastructure", desc: "Wide roads, underground utilities and smart township planning." },
   { icon: Clock, title: "Timely Possession", desc: "Committed to delivering homes on the promised timeline." },
 ];
