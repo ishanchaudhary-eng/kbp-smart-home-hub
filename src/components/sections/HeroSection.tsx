@@ -26,16 +26,26 @@ const HeroSection = () => {
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           {/* Big Logo */}
           <motion.div
-            className="bg-white rounded-2xl p-5 md:p-8 shadow-2xl mb-8"
+            className="relative mb-8"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7 }}
           >
-            <img
-              src="/kbp-logo.png"
-              alt="KBP Smart City"
-              className="h-24 md:h-36 lg:h-44 w-auto"
-            />
+            {/* Decorative glow behind */}
+            <div className="absolute -inset-4 bg-secondary/20 rounded-full blur-2xl" />
+            {/* Decorative border ring */}
+            <div className="relative bg-gradient-to-br from-white via-white to-secondary/10 rounded-[2rem] p-5 md:p-8 shadow-[0_8px_40px_rgba(197,160,68,0.25)] border border-secondary/30">
+              {/* Subtle corner accents */}
+              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-secondary rounded-tl-[2rem]" />
+              <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-secondary rounded-tr-[2rem]" />
+              <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-secondary rounded-bl-[2rem]" />
+              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-secondary rounded-br-[2rem]" />
+              <img
+                src="/kbp-logo.png"
+                alt="KBP Smart City"
+                className="h-24 md:h-36 lg:h-44 w-auto relative z-10"
+              />
+            </div>
           </motion.div>
 
           <motion.div
