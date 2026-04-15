@@ -1,22 +1,41 @@
 import { MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import LeadForm from "@/components/LeadForm";
-import villasImg from "@/assets/villas-exterior.webp";
 
 const HeroSection = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-navy-dark" />
-      <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url(${villasImg})` }} />
       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent" />
 
+      {/* Floating background shapes */}
+      <motion.div
+        className="absolute top-20 left-10 w-72 h-72 rounded-full bg-secondary/5 blur-3xl"
+        animate={{ y: [0, 30, 0], scale: [1, 1.1, 1] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-secondary/5 blur-3xl"
+        animate={{ y: [0, -20, 0], scale: [1, 1.05, 1] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      />
+
       <div className="container mx-auto px-4 relative z-10 py-12 md:py-20">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+          {/* Big Logo */}
+          <motion.img
+            src="/kbp-logo.png"
+            alt="KBP Smart City"
+            className="h-32 md:h-48 lg:h-56 w-auto mb-8"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7 }}
+          />
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
           >
             <div className="inline-block bg-secondary/20 text-secondary px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
               Book Now
@@ -27,9 +46,9 @@ const HeroSection = () => {
             <p className="text-primary-foreground/80 text-lg mb-4">
               2 & 3 BHK Apartments • Villas • Residential Plots • Commercial Spaces
             </p>
-            <div className="flex items-center gap-2 text-primary-foreground/70 mb-6">
+            <div className="flex items-center justify-center gap-2 text-primary-foreground/70 mb-6">
               <MapPin className="w-5 h-5 text-secondary" />
-              <span className="text-lg">Located on NH-21 Kharar–Kurali Highway</span>
+              <span className="text-lg">Located on NH-205 Kharar–Kurali Highway</span>
             </div>
 
             {/* Price */}
@@ -40,10 +59,10 @@ const HeroSection = () => {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-3 mb-6">
+            <div className="flex flex-wrap justify-center gap-3 mb-6">
               <Button
                 className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold text-base h-12 px-8 animate-pulse-gold"
-                onClick={() => document.getElementById("hero-form")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Get Price List
               </Button>
@@ -56,25 +75,11 @@ const HeroSection = () => {
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap gap-4 text-primary-foreground/60 text-sm">
+            <div className="flex flex-wrap justify-center gap-4 text-primary-foreground/60 text-sm">
               <span className="flex items-center gap-1"> 30+ Years Experience</span>
               <span className="flex items-center gap-1"> Gated Township</span>
               <span className="flex items-center gap-1"> On 200ft Highway</span>
             </div>
-          </motion.div>
-
-          <motion.div
-            id="hero-form"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-          >
-            <LeadForm
-              title="Get Instant Price List"
-              buttonText="Submit Enquiry"
-              variant="light"
-              className="max-w-md mx-auto lg:ml-auto"
-            />
           </motion.div>
         </div>
       </div>

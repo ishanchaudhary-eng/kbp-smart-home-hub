@@ -3,7 +3,7 @@ import { MapPin, GraduationCap, Hospital, TrendingUp, Route } from "lucide-react
 import { Button } from "@/components/ui/button";
 
 const points = [
-  { icon: Route, text: "Located on NH-21 Kharar Kurali Highway" },
+  { icon: Route, text: "Located on NH-205 Kharar Kurali Highway" },
   { icon: MapPin, text: "Easy access to Chandigarh and Mohali" },
   { icon: GraduationCap, text: "Close to schools and colleges" },
   { icon: Hospital, text: "Nearby hospitals and shopping areas" },

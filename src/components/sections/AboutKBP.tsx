@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import MotionBackground from "@/components/MotionBackground";
 
 const AboutKBP = () => (
-  <section id="about" className="py-20">
-    <div className="container mx-auto px-4">
+  <section id="about" className="py-20 relative overflow-hidden">
+    <MotionBackground variant="dots" />
+    <div className="container mx-auto px-4 relative z-10">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">The Developer</span>
@@ -20,7 +22,7 @@ const AboutKBP = () => (
         </motion.div>
         <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
           <div className="bg-gradient-to-br from-primary to-navy-light rounded-2xl h-80 md:h-96 flex items-center justify-center">
-            <img src="/kbp-logo.png" alt="KBP Group" className="w-48 md:w-64 opacity-80" />
+            <img src="/kbp-group-logo.png" alt="KBP Group" className="w-48 md:w-64" />
           </div>
         </motion.div>
       </div>

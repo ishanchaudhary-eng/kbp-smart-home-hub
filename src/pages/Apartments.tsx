@@ -219,7 +219,7 @@ const Apartments = () => (
             <div className="flex items-center gap-2 text-primary-foreground/70 mb-6">
               <MapPin className="w-5 h-5 text-secondary" />
               <span className="text-lg">
-                Located on NH-21 Kharar–Kurali Highway
+                Located on NH-205 Kharar–Kurali Highway
               </span>
             </div>
 

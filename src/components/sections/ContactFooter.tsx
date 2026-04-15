@@ -10,7 +10,7 @@ const ContactFooter = () => (
         <div>
           <img src="/kbp-logo.png" alt="KBP Smart City" className="h-16 mb-6 brightness-200" />
           <p className="text-primary-foreground/70 mb-6 text-sm leading-relaxed">
-            Township by KBP Group on NH-21 Kharar–Kurali Highway. Apartments, plots, villas and commercial spaces.
+            Township by KBP Group on NH-205 Kharar–Kurali Highway. Apartments, plots, villas and commercial spaces.
           </p>
           <div className="space-y-3">
             <div className="flex items-start gap-3">
