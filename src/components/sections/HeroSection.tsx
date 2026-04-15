@@ -1,11 +1,13 @@
 import { MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import villasImg from "@/assets/villas-exterior.webp";
 
 const HeroSection = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-navy-dark" />
+      <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url(${villasImg})` }} />
       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent" />
 
       {/* Floating background shapes */}
