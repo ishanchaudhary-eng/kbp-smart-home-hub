@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Award, Building2, Users, MapPin, Heart, Target } from "lucide-react";
 import ContactFooter from "@/components/sections/ContactFooter";
+import apartmentImg from "@/assets/apartment-exterior-1.webp";
 
 const milestones = [
   { year: "1994", title: "Founded KBP Group", desc: "Started with a vision to build quality homes for every family." },
@@ -11,8 +12,9 @@ const milestones = [
 
 const About = () => (
   <main className="pt-20">
-    <section className="py-20 bg-gradient-to-br from-primary to-navy-dark text-primary-foreground">
-      <div className="container mx-auto px-4 text-center">
+    <section className="relative py-20 bg-gradient-to-br from-primary to-navy-dark text-primary-foreground overflow-hidden">
+      <div className="absolute inset-0 bg-cover bg-center opacity-15" style={{ backgroundImage: `url(${apartmentImg})` }} />
+      <div className="container mx-auto px-4 text-center relative z-10">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Our Legacy</span>
           <h1 className="text-4xl md:text-5xl font-display font-bold mt-2 mb-4">About KBP Group</h1>
