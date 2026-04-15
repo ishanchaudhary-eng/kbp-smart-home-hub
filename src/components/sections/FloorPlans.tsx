@@ -69,7 +69,7 @@ const FloorPlans = () => {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           <div className="text-center mt-6">
             <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold h-12 px-8">
