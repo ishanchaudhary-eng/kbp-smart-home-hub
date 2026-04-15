@@ -36,7 +36,9 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-2">
-            <img src="/kbp-group-logo.png" alt="KBP Group Logo" className="h-12 md:h-16 w-auto" />
+            <div className="bg-white rounded-lg border-2 border-secondary/30 p-1.5 shadow-md">
+              <img src="/kbp-group-logo.png" alt="KBP Group Logo" className="h-9 md:h-12 w-auto" />
+            </div>
           </Link>
 
           {/* Desktop Nav */}
