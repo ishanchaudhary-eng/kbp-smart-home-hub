@@ -22,7 +22,9 @@ const AboutKBP = () => (
         </motion.div>
         <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
           <div className="bg-gradient-to-br from-primary to-navy-light rounded-2xl h-80 md:h-96 flex items-center justify-center">
-            <img src="/kbp-group-logo.png" alt="KBP Group" className="w-48 md:w-64" />
+            <div className="bg-white rounded-2xl p-6 shadow-lg">
+              <img src="/kbp-group-logo.png" alt="KBP Group" className="w-40 md:w-56" />
+            </div>
           </div>
         </motion.div>
       </div>
