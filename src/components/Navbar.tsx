@@ -32,17 +32,20 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 z-50">
+      {/* Logo strip */}
+      <div className="bg-white py-2 px-4 flex justify-center">
+        <Link to="/">
+          <img src="/kbp-group-logo.png" alt="KBP Group Logo" className="h-14 md:h-20 w-auto" />
+        </Link>
+      </div>
+      {/* Nav bar */}
+      <div className="bg-primary/95 backdrop-blur-md shadow-lg">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="bg-white rounded-lg border-2 border-secondary/30 p-1.5 shadow-md">
-              <img src="/kbp-group-logo.png" alt="KBP Group Logo" className="h-9 md:h-12 w-auto" />
-            </div>
-          </Link>
+        <div className="flex items-center justify-between h-12 md:h-14">
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1 flex-1 justify-center">
             {navLinks.map((link) =>
               link.href.startsWith("/#") ? (
                 <button
@@ -86,6 +89,7 @@ const Navbar = () => {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+      </div>
       </div>
 
       {/* Mobile Menu */}
