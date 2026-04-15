@@ -33,63 +33,61 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
-      {/* Logo strip */}
-      <div className="bg-white py-2 px-4 flex justify-center">
-        <Link to="/">
-          <img src="/kbp-group-logo.png" alt="KBP Group Logo" className="h-14 md:h-20 w-auto" />
+      <div className="flex items-stretch">
+        {/* Logo — separate white block on the left, taller than nav */}
+        <Link to="/" className="bg-white flex items-center justify-center px-4 py-2 shrink-0 shadow-md z-10">
+          <img src="/kbp-group-logo.png" alt="KBP Group Logo" className="h-14 md:h-[4.5rem] w-auto" />
         </Link>
-      </div>
-      {/* Nav bar */}
-      <div className="bg-primary/95 backdrop-blur-md shadow-lg">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-12 md:h-14">
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-1 flex-1 justify-center">
-            {navLinks.map((link) =>
-              link.href.startsWith("/#") ? (
-                <button
-                  key={link.label}
-                  onClick={() => handleNavClick(link.href)}
-                  className="px-3 py-2 text-sm font-medium text-primary-foreground/80 hover:text-secondary transition-colors"
-                >
-                  {link.label}
-                </button>
-              ) : (
-                <Link
-                  key={link.label}
-                  to={link.href}
-                  className="px-3 py-2 text-sm font-medium text-primary-foreground/80 hover:text-secondary transition-colors"
-                >
-                  {link.label}
-                </Link>
-              )
-            )}
-          </div>
+        {/* Nav bar fills the rest */}
+        <div className="flex-1 bg-primary/95 backdrop-blur-md shadow-lg flex items-center">
+          <div className="flex items-center justify-between w-full px-4 h-12 md:h-14">
+            {/* Desktop Nav */}
+            <div className="hidden lg:flex items-center gap-1 flex-1">
+              {navLinks.map((link) =>
+                link.href.startsWith("/#") ? (
+                  <button
+                    key={link.label}
+                    onClick={() => handleNavClick(link.href)}
+                    className="px-3 py-2 text-sm font-medium text-primary-foreground/80 hover:text-secondary transition-colors"
+                  >
+                    {link.label}
+                  </button>
+                ) : (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className="px-3 py-2 text-sm font-medium text-primary-foreground/80 hover:text-secondary transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
+            </div>
 
-          <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:+917837393955" className="flex items-center gap-1 text-secondary text-sm font-semibold">
-              <Phone className="w-4 h-4" />
-              Call Now
-            </a>
-            <Button
-              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold"
-              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+            <div className="hidden lg:flex items-center gap-3 shrink-0">
+              <a href="tel:+917837393955" className="flex items-center gap-1 text-secondary text-sm font-semibold">
+                <Phone className="w-4 h-4" />
+                Call Now
+              </a>
+              <Button
+                className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold"
+                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Book Site Visit
+              </Button>
+            </div>
+
+            {/* Mobile Hamburger */}
+            <button
+              className="lg:hidden text-primary-foreground p-2 ml-auto"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
             >
-              Book Site Visit
-            </Button>
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
-
-          {/* Mobile Hamburger */}
-          <button
-            className="lg:hidden text-primary-foreground p-2"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
-      </div>
       </div>
 
       {/* Mobile Menu */}
