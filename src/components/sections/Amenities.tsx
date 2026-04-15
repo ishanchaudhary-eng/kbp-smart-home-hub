@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Building, Baby, PersonStanding, TreePine, Dumbbell, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import FloatingParticles from "@/components/FloatingParticles";
 
 const amenities = [
   { icon: Building, label: "Clubhouse" },
@@ -12,8 +13,22 @@ const amenities = [
 ];
 
 const Amenities = () => (
-  <section id="amenities" className="py-20 bg-primary text-primary-foreground">
-    <div className="container mx-auto px-4">
+  <section id="amenities" className="py-20 bg-primary text-primary-foreground relative overflow-hidden">
+    <FloatingParticles count={15} color="secondary" />
+
+    {/* Decorative rings */}
+    <motion.div
+      className="absolute -top-32 -right-32 w-64 h-64 rounded-full border border-secondary/10"
+      animate={{ rotate: 360 }}
+      transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+    />
+    <motion.div
+      className="absolute -bottom-20 -left-20 w-48 h-48 rounded-full border border-secondary/10"
+      animate={{ rotate: -360 }}
+      transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+    />
+
+    <div className="container mx-auto px-4 relative z-10">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
         <span className="text-secondary font-semibold text-sm uppercase tracking-wider">World-Class Living</span>
         <h2 className="text-3xl md:text-4xl font-display font-bold mt-2">Township Amenities</h2>
@@ -25,10 +40,16 @@ const Amenities = () => (
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.05 }}
-            className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl p-5 text-center hover:bg-primary-foreground/10 transition-colors group"
+            transition={{ delay: i * 0.08 }}
+            whileHover={{ scale: 1.05, y: -4 }}
+            className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl p-5 text-center hover:bg-primary-foreground/10 transition-colors group cursor-pointer"
           >
-            <a.icon className="w-8 h-8 text-secondary mx-auto mb-3 group-hover:scale-110 transition-transform" />
+            <motion.div
+              whileHover={{ rotate: [0, -10, 10, 0] }}
+              transition={{ duration: 0.5 }}
+            >
+              <a.icon className="w-8 h-8 text-secondary mx-auto mb-3 group-hover:scale-110 transition-transform" />
+            </motion.div>
             <p className="text-sm font-medium text-primary-foreground/80">{a.label}</p>
           </motion.div>
         ))}
