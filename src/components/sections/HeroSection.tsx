@@ -34,7 +34,7 @@ const HeroSection = () => {
             {/* Decorative glow behind */}
             <div className="absolute -inset-4 bg-secondary/20 rounded-full blur-2xl" />
             {/* Decorative border ring */}
-            <div className="relative bg-gradient-to-br from-white via-white to-secondary/10 rounded-[2rem] px-5 md:px-8 py-2 md:py-3 shadow-[0_8px_40px_rgba(197,160,68,0.25)] border border-secondary/30">
+            <div className="relative bg-gradient-to-br from-white via-white to-secondary/10 rounded-[2rem] px-4 md:px-6 py-1 md:py-1.5 shadow-[0_8px_40px_rgba(197,160,68,0.25)] border border-secondary/30">
               {/* Subtle corner accents */}
               <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-secondary rounded-tl-[2rem]" />
               <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-secondary rounded-tr-[2rem]" />
