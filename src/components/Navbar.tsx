@@ -40,7 +40,7 @@ const Navbar = () => {
         </Link>
 
         {/* Nav bar fills the rest */}
-        <div className="flex-1 bg-primary/95 backdrop-blur-md shadow-lg flex items-center">
+        <div className="flex-1 bg-primary shadow-lg flex items-center">
           <div className="flex items-center justify-between w-full px-4 h-12 md:h-14">
             {/* Desktop Nav */}
             <div className="hidden lg:flex items-center gap-1 flex-1">
