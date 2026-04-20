@@ -31,10 +31,8 @@ const About = () => (
             <p className="text-muted-foreground leading-relaxed mb-4">Founded in 1994, KBP Group has grown from a small construction firm to one of Punjab's most respected real estate developers. With over 30 years of experience, we have delivered 50+ residential and commercial projects across the state.</p>
             <p className="text-muted-foreground leading-relaxed">Every project reflects a commitment to quality construction, transparent dealings and customer satisfaction.</p>
           </div>
-          <div className="bg-gradient-to-br from-primary to-navy-light rounded-2xl h-72 flex items-center justify-center">
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <img src="/kbp-group-logo.png" alt="KBP Group Logo" className="w-40" />
-            </div>
+          <div className="rounded-2xl h-72 overflow-hidden shadow-lg">
+            <img src="/kbp-group-logo.png" alt="KBP Group Logo" className="w-full h-full object-cover" />
           </div>
         </div>
 
