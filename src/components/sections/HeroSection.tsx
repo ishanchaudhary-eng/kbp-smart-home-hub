@@ -1,4 +1,4 @@
-import { MapPin, ChevronDown } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import villasImg from "@/assets/villas-exterior.webp";
