@@ -33,13 +33,11 @@ const HeroSection = () => {
           >
             {/* Decorative glow behind */}
             <div className="absolute -inset-8 bg-secondary/20 rounded-full blur-3xl" />
-            <div className="relative bg-white rounded-2xl px-6 md:px-8 py-3 md:py-4 shadow-[0_8px_40px_rgba(197,160,68,0.3)] border border-secondary/40">
-              <img
-                src="/kbp-logo.png"
-                alt="KBP Smart City"
-                className="w-72 md:w-[28rem] lg:w-[34rem] h-auto relative z-10"
-              />
-            </div>
+            <img
+              src="/kbp-logo.png"
+              alt="KBP Smart City"
+              className="w-72 md:w-[28rem] lg:w-[34rem] h-auto relative z-10 drop-shadow-[0_8px_30px_rgba(197,160,68,0.35)]"
+            />
           </motion.div>
 
           <motion.div
