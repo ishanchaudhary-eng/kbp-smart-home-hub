@@ -36,7 +36,7 @@ const HeroSection = () => {
             <img
               src="/kbp-logo.png"
               alt="KBP Smart City"
-              className="w-72 md:w-[28rem] lg:w-[34rem] h-auto relative z-10 drop-shadow-[0_8px_30px_rgba(197,160,68,0.35)]"
+              className="w-80 md:w-[32rem] lg:w-[40rem] h-auto relative z-10 drop-shadow-[0_8px_30px_rgba(197,160,68,0.45)]"
             />
           </motion.div>
 
