@@ -10,7 +10,7 @@ const highlights = [
 ];
 
 const QuickHighlights = () => (
-  <section className="py-16 bg-warm-gray relative overflow-hidden">
+  <section id="highlights" className="py-16 bg-warm-gray relative overflow-hidden">
     <MotionBackground variant="dots" />
     <div className="container mx-auto px-4 relative z-10">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
