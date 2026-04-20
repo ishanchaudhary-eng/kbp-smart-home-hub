@@ -32,20 +32,12 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
           >
             {/* Decorative glow behind */}
-            <div className="absolute -inset-4 bg-secondary/20 rounded-full blur-2xl" />
-            {/* Decorative border ring */}
-            <div className="relative bg-gradient-to-br from-white via-white to-secondary/10 rounded-[2rem] px-4 md:px-6 py-1 md:py-1.5 shadow-[0_8px_40px_rgba(197,160,68,0.25)] border border-secondary/30">
-              {/* Subtle corner accents */}
-              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-secondary rounded-tl-[2rem]" />
-              <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-secondary rounded-tr-[2rem]" />
-              <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-secondary rounded-bl-[2rem]" />
-              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-secondary rounded-br-[2rem]" />
-              <img
-                src="/kbp-logo.png"
-                alt="KBP Smart City"
-                className="w-72 md:w-[28rem] lg:w-[34rem] h-auto relative z-10"
-              />
-            </div>
+            <div className="absolute -inset-8 bg-secondary/20 rounded-full blur-3xl" />
+            <img
+              src="/kbp-logo.png"
+              alt="KBP Smart City"
+              className="w-80 md:w-[32rem] lg:w-[38rem] h-auto relative z-10 drop-shadow-[0_8px_30px_rgba(197,160,68,0.4)]"
+            />
           </motion.div>
 
           <motion.div
