@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 224 40% 18%;
 
-    --primary: 224 40% 20%;
+    --primary: 223 56% 15%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 43 52% 52%;
@@ -32,13 +32,13 @@
 
     --border: 224 20% 90%;
     --input: 224 20% 90%;
-    --ring: 224 40% 20%;
+    --ring: 223 56% 15%;
 
     --radius: 0.5rem;
 
-    --navy: 224 40% 20%;
-    --navy-light: 224 35% 32%;
-    --navy-dark: 224 50% 12%;
+    --navy: 223 56% 15%;
+    --navy-light: 223 45% 28%;
+    --navy-dark: 223 60% 9%;
     --gold: 43 52% 52%;
     --gold-light: 43 60% 65%;
     --gold-dark: 43 50% 40%;
