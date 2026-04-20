@@ -92,27 +92,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll down indicator */}
-      <motion.button
-        onClick={() => document.getElementById("highlights")?.scrollIntoView({ behavior: "smooth" })}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 group cursor-pointer"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
-        aria-label="Scroll down to explore more"
-      >
-        <span className="text-secondary text-xs font-semibold uppercase tracking-[0.2em] group-hover:text-secondary/80 transition-colors">
-          Explore More
-        </span>
-        <motion.div
-          className="relative flex items-center justify-center w-10 h-10 rounded-full border-2 border-secondary/60 bg-secondary/10 backdrop-blur-sm group-hover:border-secondary group-hover:bg-secondary/20 transition-colors"
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <ChevronDown className="w-5 h-5 text-secondary" />
-          <span className="absolute inset-0 rounded-full border-2 border-secondary/40 animate-ping" />
-        </motion.div>
-      </motion.button>
     </section>
   );
 };
