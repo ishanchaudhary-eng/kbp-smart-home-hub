@@ -21,7 +21,7 @@ const ContactFooter = () => (
             </div>
             <div className="flex items-center gap-3">
               <Phone className="w-5 h-5 text-secondary shrink-0" />
-              <a href="tel:+918699366993" className="text-sm text-primary-foreground/80 hover:text-secondary transition-colors">+91 8699366993</a>
+              <a href="tel:+918699366993" className="text-sm text-primary-foreground/80 hover:text-secondary transition-colors">086993 66993</a>
             </div>
             <div className="flex items-center gap-3">
               <Mail className="w-5 h-5 text-secondary shrink-0" />
@@ -43,12 +43,6 @@ const ContactFooter = () => (
             ))}
           </div>
 
-          {/* RERA Info */}
-          <div className="mt-8 bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl p-4">
-            <h4 className="font-semibold text-sm mb-2 font-sans text-secondary">RERA Information</h4>
-            <p className="text-xs text-primary-foreground/60">RERA Registration No: XXXXXXXXXX</p>
-            <p className="text-xs text-primary-foreground/50 mt-1">Visit rera.punjab.gov.in for details</p>
-          </div>
         </div>
 
         {/* Contact Form */}
