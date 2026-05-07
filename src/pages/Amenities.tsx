@@ -384,7 +384,7 @@ const Amenities = () => (
               <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold h-12 px-8" onClick={() => document.getElementById("amenity-visit-form")?.scrollIntoView({ behavior: "smooth" })}>
                 Book Site Visit
               </Button>
-              <Button variant="outline" className="font-bold h-12 px-8" onClick={() => (window.location.href = "tel:+917837393955")}>
+              <Button variant="outline" className="font-bold h-12 px-8" onClick={() => (window.location.href = "tel:+918699366993")}>
                 Talk To Sales Team
               </Button>
             </div>

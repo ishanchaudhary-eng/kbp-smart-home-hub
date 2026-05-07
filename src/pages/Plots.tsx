@@ -375,7 +375,7 @@ const Plots = () => (
               <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold h-12 px-8" onClick={() => document.getElementById("plot-visit-form")?.scrollIntoView({ behavior: "smooth" })}>
                 Schedule Site Visit
               </Button>
-              <Button variant="outline" className="border-secondary text-secondary bg-transparent hover:bg-secondary/10 font-bold h-12 px-8" onClick={() => (window.location.href = "tel:+917837393955")}>
+              <Button variant="outline" className="border-secondary text-secondary bg-transparent hover:bg-secondary/10 font-bold h-12 px-8" onClick={() => (window.location.href = "tel:+918699366993")}>
                 Talk to Sales Team
               </Button>
             </div>
