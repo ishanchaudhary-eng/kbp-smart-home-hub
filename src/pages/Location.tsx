@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { MapPin, Clock, GraduationCap, Hospital, ShoppingBag, TrendingUp, Car, Building2, Utensils, Landmark, Bus, Phone, Check } from "lucide-react";
 
@@ -41,9 +42,10 @@ const conveniences = [
 
 const Location = () => {
   const [form, setForm] = useState({ name: "", phone: "", time: "" });
-  const [submitted, setSubmitted] = useState(false);
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
+  const routerLocation = useLocation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,8 +57,8 @@ const Location = () => {
       toast({ title: "Please solve the math question", variant: "destructive" });
       return;
     }
-    setSubmitted(true);
     toast({ title: "Site Visit Booked!", description: "Our team will confirm your visit shortly." });
+    navigate("/thank-you", { state: { from: routerLocation.pathname } });
   };
 
   return (
@@ -279,16 +281,7 @@ const Location = () => {
               </ul>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-              {submitted ? (
-                <Card className="text-center">
-                  <CardContent className="p-8">
-                    <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-3"><Check className="w-6 h-6 text-secondary" /></div>
-                    <h3 className="text-xl font-bold font-display mb-2 text-foreground">Visit Booked!</h3>
-                    <p className="text-sm text-muted-foreground">Our team will confirm your visit shortly.</p>
-                  </CardContent>
-                </Card>
-              ) : (
-                <Card>
+              <Card>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold font-display mb-4 text-foreground">Book Site Visit</h3>
                     <form onSubmit={handleSubmit} className="space-y-3">
@@ -302,8 +295,7 @@ const Location = () => {
                     </form>
                     <p className="text-xs text-muted-foreground/50 mt-2 text-center">We respect your privacy. No spam.</p>
                   </CardContent>
-                </Card>
-              )}
+              </Card>
             </motion.div>
           </div>
         </div>

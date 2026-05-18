@@ -13,6 +13,7 @@ import Plots from "./pages/Plots";
 import Commercial from "./pages/Commercial";
 import Location from "./pages/Location";
 import Amenities from "./pages/Amenities";
+import ThankYou from "./pages/ThankYou";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/commercial" element={<Commercial />} />
           <Route path="/location" element={<Location />} />
           <Route path="/amenities" element={<Amenities />} />
+          <Route path="/thank-you" element={<ThankYou />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <StickyButtons />
