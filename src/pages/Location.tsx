@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { MapPin, Clock, GraduationCap, Hospital, ShoppingBag, TrendingUp, Car, Building2, Utensils, Landmark, Bus, Phone, Check } from "lucide-react";
 
@@ -41,9 +42,10 @@ const conveniences = [
 
 const Location = () => {
   const [form, setForm] = useState({ name: "", phone: "", time: "" });
-  const [submitted, setSubmitted] = useState(false);
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
+  const routerLocation = useLocation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,8 +57,8 @@ const Location = () => {
       toast({ title: "Please solve the math question", variant: "destructive" });
       return;
     }
-    setSubmitted(true);
     toast({ title: "Site Visit Booked!", description: "Our team will confirm your visit shortly." });
+    navigate("/thank-you", { state: { from: routerLocation.pathname } });
   };
 
   return (
