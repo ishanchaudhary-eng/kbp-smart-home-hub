@@ -1,5 +1,5 @@
-import { Check } from "lucide-react";
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,9 +9,10 @@ import FloatingParticles from "@/components/FloatingParticles";
 
 const SiteVisitCTA = () => {
   const [formData, setFormData] = useState({ name: "", phone: "", date: "" });
-  const [submitted, setSubmitted] = useState(false);
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,8 +24,8 @@ const SiteVisitCTA = () => {
       toast({ title: "Please solve the math question", variant: "destructive" });
       return;
     }
-    setSubmitted(true);
     toast({ title: "Site Visit Booked!", description: "Our team will confirm your visit shortly." });
+    navigate("/thank-you", { state: { from: location.pathname } });
   };
 
   return (
@@ -68,21 +69,7 @@ const SiteVisitCTA = () => {
             </ul>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-            {submitted ? (
-              <div className="rounded-xl p-6 text-center bg-card shadow-xl border">
-                <motion.div
-                  className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-3"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ type: "spring", stiffness: 200 }}
-                >
-                  <Check className="w-6 h-6 text-secondary" />
-                </motion.div>
-                <h3 className="text-xl font-bold font-display mb-2 text-foreground">Visit Booked!</h3>
-                <p className="text-sm text-muted-foreground">Our team will confirm your visit shortly.</p>
-              </div>
-            ) : (
-              <motion.div
+            <motion.div
                 className="bg-card shadow-xl border rounded-xl p-6"
                 whileHover={{ boxShadow: "0 25px 50px -12px rgba(0,0,0,0.25)" }}
               >
@@ -97,8 +84,7 @@ const SiteVisitCTA = () => {
                   </Button>
                 </form>
                 <p className="text-xs text-muted-foreground/50 mt-2 text-center">We respect your privacy. No spam.</p>
-              </motion.div>
-            )}
+            </motion.div>
           </motion.div>
         </div>
       </div>
