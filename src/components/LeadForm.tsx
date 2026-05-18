@@ -1,5 +1,5 @@
-import { Check } from "lucide-react";
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
@@ -15,9 +15,10 @@ interface LeadFormProps {
 
 const LeadForm = ({ title = "Get Instant Price List", buttonText = "Submit Enquiry", variant = "light", compact = false, className = "" }: LeadFormProps) => {
   const [formData, setFormData] = useState({ name: "", phone: "", email: "", interest: "" });
-  const [submitted, setSubmitted] = useState(false);
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,22 +30,12 @@ const LeadForm = ({ title = "Get Instant Price List", buttonText = "Submit Enqui
       toast({ title: "Please solve the math question", variant: "destructive" });
       return;
     }
-    setSubmitted(true);
     toast({ title: "Thank You!", description: "Our team will contact you shortly." });
+    navigate("/thank-you", { state: { from: location.pathname } });
   };
 
   const bgClass = variant === "dark" ? "bg-primary text-primary-foreground" : variant === "gold" ? "bg-secondary/10 border border-secondary/30" : "bg-card shadow-xl border";
   const inputClass = variant === "dark" ? "bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50" : "";
-
-  if (submitted) {
-    return (
-      <div className={`rounded-xl p-6 text-center ${bgClass} ${className}`}>
-        <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-3"><Check className="w-6 h-6 text-secondary" /></div>
-        <h3 className="text-xl font-bold font-display mb-2">Thank You!</h3>
-        <p className="text-sm opacity-80">Our team will contact you within 30 minutes.</p>
-      </div>
-    );
-  }
 
   return (
     <div className={`rounded-xl ${compact ? "p-4" : "p-6"} ${bgClass} ${className}`}>
