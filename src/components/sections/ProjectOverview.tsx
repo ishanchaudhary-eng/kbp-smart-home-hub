@@ -19,8 +19,13 @@ const ProjectOverview = () => (
           <p className="text-muted-foreground leading-relaxed mb-6">
             Options available for first-time home buyers, investors and businesses.
           </p>
-          <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold h-12 px-8">
-            Download Brochure
+          <Button
+            asChild
+            className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold h-12 px-8"
+          >
+            <a href="/KBP-Brochure.pdf" download="KBP-Smart-City-Brochure.pdf">
+              Download Brochure
+            </a>
           </Button>
         </motion.div>
 
