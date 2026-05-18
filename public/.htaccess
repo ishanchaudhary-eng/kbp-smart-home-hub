@@ -1,16 +1,14 @@
-# SPA fallback for Hostinger (Apache)
-# Ensures every URL serves index.html so React Router + GTM load on all pages
+Options -MultiViews
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # Don't rewrite real files or directories (assets, brochure, robots.txt, etc.)
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule ^ - [L]
+  RewriteRule ^index\.html$ - [L]
 
-  # Everything else -> index.html (SPA routing)
-  RewriteRule ^ index.html [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
 </IfModule>
 
 # Proper MIME types
