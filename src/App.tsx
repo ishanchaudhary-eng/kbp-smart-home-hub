@@ -25,6 +25,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <PageTracker />
         <ScrollToTop />
         <Navbar />
         <Routes>
