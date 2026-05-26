@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/Navbar";
+import PageTracker from "@/components/PageTracker";
 import ScrollToTop from "@/components/ScrollToTop";
 import StickyButtons from "@/components/StickyButtons";
 import Index from "./pages/Index";
