@@ -95,8 +95,9 @@ const ShopForm = ({ title, buttonText, variant = "light", showBusiness = false, 
         {showBudget && (
             <select value={data.budget} onChange={(e) => setData({ ...data, budget: e.target.value })} className={`w-full h-10 rounded-md border px-3 text-sm ${inp || "border-input bg-background"}`}>
               <option value="">Budget Range</option>
-              <option value="under-1cr">Under 1 Cr</option>
-              <option value="1cr-plus">1 Cr+</option>
+              <option value="small">Small Shop</option>
+              <option value="medium">Medium Shop</option>
+              <option value="large">Large Shop / Showroom</option>
             </select>
         )}
         {showDate && <Input placeholder="Preferred Visit Date" type="date" value={data.date} onChange={(e) => setData({ ...data, date: e.target.value })} className={inp} />}

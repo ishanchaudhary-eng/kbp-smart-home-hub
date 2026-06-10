@@ -59,13 +59,6 @@ const HeroSection = () => {
               <span className="text-lg">Located on NH-205 Kharar–Kurali Highway</span>
             </div>
 
-            {/* Price */}
-            <div className="bg-secondary/20 rounded-xl p-4 inline-block mb-6">
-              <p className="text-primary-foreground/60 text-sm">Starting From</p>
-              <p className="text-3xl font-bold text-secondary">₹54.90 Lakhs*</p>
-              <p className="text-primary-foreground/50 text-xs">*T&C Apply</p>
-            </div>
-
             {/* CTAs */}
             <div className="flex flex-wrap justify-center gap-3 mb-6">
               <Button
