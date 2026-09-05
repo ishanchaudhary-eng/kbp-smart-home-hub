@@ -23,7 +23,6 @@ import {
   Lightbulb,
   Cable,
   Fence,
-  LandPlot,
   Leaf,
   Wind,
   MoveRight,

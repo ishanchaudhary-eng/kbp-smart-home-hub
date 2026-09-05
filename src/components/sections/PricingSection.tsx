@@ -21,7 +21,7 @@ const PricingSection = () => (
         </p>
       </motion.div>
 
-      <div className="grid lg:grid-cols-4 gap-6">
+      <div className="grid lg:grid-cols-3 gap-6">
         {pricingData.map((item, i) => (
           <motion.div
             key={item.type}
