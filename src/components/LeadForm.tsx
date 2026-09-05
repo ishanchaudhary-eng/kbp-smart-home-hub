@@ -53,7 +53,7 @@ const LeadForm = ({ title = "Get Instant Price List", buttonText = "Submit Enqui
             <option value="">Interested In</option>
             <option value="2bhk">2 BHK Apartment</option>
             <option value="3bhk">3 BHK Apartment</option>
-            <option value="plots">Residential Plot</option>
+            
             <option value="commercial">Commercial Shop</option>
             <option value="villa">Villa</option>
           </select>

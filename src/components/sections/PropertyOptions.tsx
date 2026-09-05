@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Home, LandPlot, Store } from "lucide-react";
+import { ArrowRight, Home, Store } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import MotionBackground from "@/components/MotionBackground";
 import FloatingParticles from "@/components/FloatingParticles";
 
 const options = [
-  { icon: Home, title: "Apartments", desc: "2 BHK and 3 BHK modern apartments designed for comfortable family living.", gradient: "from-primary to-navy-light" },
-  { icon: LandPlot, title: "Plots", desc: "Residential plots for building your dream home in a secure township.", gradient: "from-navy-light to-primary" },
+  { icon: Home, title: "Apartments", desc: "2 BHK and 3 BHK luxury apartments designed for comfortable family living.", gradient: "from-primary to-navy-light" },
   { icon: Store, title: "Commercial", desc: "Shops and commercial spaces designed for growing businesses.", gradient: "from-primary via-navy-dark to-navy-light" },
 ];
 
@@ -19,7 +18,7 @@ const PropertyOptions = () => (
         <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Property Types</span>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Property Types Available</h2>
       </motion.div>
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
         {options.map((opt, i) => (
           <motion.div
             key={opt.title}
