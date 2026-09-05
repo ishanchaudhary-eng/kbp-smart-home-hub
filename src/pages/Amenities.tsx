@@ -98,7 +98,7 @@ const AmenityForm = ({ title, buttonText, variant = "light", showInterest = fals
             <option value="">Interested In</option>
             <option value="2bhk">2 BHK Apartment</option>
             <option value="3bhk">3 BHK Apartment</option>
-            <option value="plot">Residential Plot</option>
+            
             <option value="commercial">Commercial Shop</option>
             <option value="villa">Villa</option>
           </select>

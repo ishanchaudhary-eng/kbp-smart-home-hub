@@ -7,7 +7,6 @@ import FloatingParticles from "@/components/FloatingParticles";
 const pricingData = [
   { type: "2 BHK Apartment", features: ["2 Bedrooms", "2 Bathrooms", "Modular Kitchen", "Balcony", "Car Parking"] },
   { type: "3 BHK Apartment", features: ["3 Bedrooms", "2 Bathrooms", "Large Living Room", "2 Balconies", "Car Parking"], popular: true },
-  { type: "Residential Plot", features: ["Freehold Property", "Demarcated Plots", "Wide Internal Roads", "All Civic Amenities", "Corner / Park Facing Available"] },
 ];
 
 const PricingSection = () => (
@@ -18,7 +17,7 @@ const PricingSection = () => (
         <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Pricing</span>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2">Request Latest Price Sheet</h2>
         <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
-          KBP Smart City offers competitively priced homes and plots, making it one of the most affordable township developments near Chandigarh.
+          KBP Smart City offers competitively priced homes, making it one of the most affordable township developments near Chandigarh.
         </p>
       </motion.div>
 
