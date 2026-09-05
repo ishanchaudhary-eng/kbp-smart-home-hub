@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className="flex-1 bg-primary shadow-lg flex items-center">
           <div className="flex items-center justify-between w-full px-4 h-12 md:h-14">
             {/* Desktop Nav */}
-            <div className="hidden lg:flex items-center gap-1 flex-1">
+            <div className="hidden lg:flex items-center justify-center gap-1 flex-1">
               {navLinks.map((link) =>
                 link.href.startsWith("/#") ? (
                   <button
