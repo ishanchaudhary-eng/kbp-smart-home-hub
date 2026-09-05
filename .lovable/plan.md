@@ -1,69 +1,37 @@
+# Plan: Remove Plots From the Website
 
+Remove every "Plots" title and piece of plot content sitewide. Where a plot reference sits in a list of offerings, replace it with "2BHK & 3BHK Luxury Apartments" wording so sentences still read naturally.
 
-## Plan: Remove GPT-Sounding Text Across the Website
+## Changes
 
-The website has several phrases and patterns that sound overly polished, formulaic, or AI-generated. These will be rewritten to sound more natural and direct.
+**1. Remove the Plots page**
+- Delete `src/pages/Plots.tsx`
+- Remove the `/plots` route and import in `src/App.tsx`
+- Remove `/plots` from `public/sitemap.xml`
 
-### What Gets Changed
+**2. Navigation & footer**
+- `src/components/Navbar.tsx`: remove the "Plots" nav link
+- `src/components/sections/ContactFooter.tsx`: remove "Plots" from quick links; rewrite footer blurb to drop plots ("Apartments, villas and commercial spaces")
 
-**1. Overly polished taglines and headings**
-- "Why KBP Smart City Is A Smart Choice" → "Key Highlights"
-- "Lifestyle Amenities For Your Family" → "Township Amenities"
-- "Amenities That Make Everyday Living Better" → "Township Amenities & Facilities"
-- "Comfort Backed By Strong Infrastructure" → "Township Infrastructure"
-- "Why Families Will Feel At Home Here" → "Designed For All Age Groups"
-- "More Open Space, Better Living" → "40% Open Area"
-- "A Township Designed For Real Family Living" → remove this intro paragraph or simplify
-- "Excellent Connectivity That Makes Daily Life Easier" → "Connectivity From KBP Smart City"
-- "Unmatched Connectivity" → "Connectivity"
-- "Choose Your Ideal Property" → "Property Types Available"
-- "Perfect Homes For Modern Families" → "About The Apartments"
-- "Why Buyers Prefer Plots at KBP Smart City" → "Why Buy a Plot Here"
-- "Buy With Greater Confidence" → "Trust & Transparency"
-- "Perfect for Different Buyer Needs" → "Who Should Buy"
-- "Why Many Buyers Still Prefer Plots" → "Plots vs Flats"
-- "Well Connected Yet Peaceful" → "Location Advantage"
-- "Why Invest In Shops At KBP Smart City" → "Why Invest Here"
-- "Perfect For Multiple Business Types" → "Suitable Business Types"
-- "Why Businesses Thrive Here" → "Commercial Advantages"
-- "Strong Location Advantage" → "Location"
-- "Smart Commercial Investment" → "Investment Potential"
-- "Growing Real Estate Corridor" → "Area Growth Potential"
-- "Strategically Located For Easy Connectivity" → "Location Overview"
-- "Everything You Need Nearby" → "Daily Conveniences"
+**3. Homepage cards (removed, 3 cards → 2)**
+- `src/components/sections/PropertyOptions.tsx`: remove the "Plots" card — Apartments and Commercial remain
+- `src/components/sections/PricingSection.tsx`: remove the "Residential Plot" pricing card; rewrite intro line to drop "plots"
 
-**2. GPT filler descriptions to simplify/rewrite**
-- "KBP Smart City apartments are designed to provide comfortable living spaces for families. The layouts are thoughtfully planned to maximize space, natural light and ventilation while keeping affordability in mind." → Shorter, more factual version
-- "Three decades of trust, quality, and commitment to building homes that families love." → "Established real estate developer with 30+ years in Punjab."
-- "KBP Smart City is not just a home — it's a smart investment for your future." → Remove or simplify
-- "Our philosophy is simple — build homes that we'd be proud to live in ourselves." → Remove
-- "This excellent connectivity makes KBP Smart City a convenient location for both end users and property investors." → Remove
-- "KBP Smart City puts you minutes away from everything that matters." → Remove
-- Various "designed to", "thoughtfully planned", "A more secure and organized environment" → simplify
+**4. List mentions rewritten to make sense**
+- `src/components/sections/HeroSection.tsx`: tagline → "2BHK & 3BHK Luxury Apartments • Villas • Commercial Spaces"
+- `src/components/sections/ProjectOverview.tsx`: "apartments, residential plots and commercial spaces" → "luxury apartments and commercial spaces"
+- `src/components/sections/QuickHighlights.tsx`: "Apartments, plots, villas and commercial spaces" → "Apartments, villas and commercial spaces"
+- `src/components/sections/ContactFooter.tsx` blurb (same as above)
 
-**3. Amenities page data descriptions** (too marketing-speak)
-- Rewrite amenity descriptions to be shorter and factual
+**5. Forms**
+- `src/components/LeadForm.tsx`: remove "Residential Plot" option from the interest dropdown
+- `src/pages/Location.tsx`, `src/pages/Amenities.tsx`: scan and remove any plot mentions found
 
-### Files to Edit
-1. `src/components/sections/QuickHighlights.tsx`
-2. `src/components/sections/Amenities.tsx`
-3. `src/components/sections/WhyChoose.tsx`
-4. `src/components/sections/InvestmentOpportunity.tsx`
-5. `src/components/sections/ConnectivityTimeline.tsx`
-6. `src/components/sections/PropertyOptions.tsx`
-7. `src/components/sections/ProjectOverview.tsx`
-8. `src/components/sections/AboutKBP.tsx`
-9. `src/components/sections/ContactFooter.tsx`
-10. `src/pages/About.tsx`
-11. `src/pages/Apartments.tsx`
-12. `src/pages/Plots.tsx`
-13. `src/pages/Commercial.tsx`
-14. `src/pages/Amenities.tsx`
-15. `src/pages/Location.tsx`
+**6. SEO/meta**
+- `index.html`: remove plot keywords/mentions from title, description, JSON-LD if present
 
-### Approach
-- Replace flowery headings with short, direct ones
-- Remove filler sentences that don't add information
-- Keep descriptions factual and concise
-- Maintain the same layout and structure, only change text content
+**Not touched:** Google Maps embed URLs (third-party listing text, cannot edit).
 
+## Verification
+- `rg -i plot src/ public/ index.html` returns nothing except the Google Maps embed URLs
+- Build passes; `/plots` no longer resolves as a page
