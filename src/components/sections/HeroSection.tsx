@@ -52,7 +52,7 @@ const HeroSection = () => {
               Affordable Homes Near Chandigarh
             </h1>
             <p className="text-primary-foreground/80 text-lg mb-4">
-              2 & 3 BHK Apartments • Villas • Residential Plots • Commercial Spaces
+              2BHK & 3BHK Luxury Apartments • Villas • Commercial Spaces
             </p>
             <div className="flex items-center justify-center gap-2 text-primary-foreground/70 mb-6">
               <MapPin className="w-5 h-5 text-secondary" />

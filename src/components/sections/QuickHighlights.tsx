@@ -5,7 +5,7 @@ import MotionBackground from "@/components/MotionBackground";
 const highlights = [
   { icon: Route, title: "Highway Connectivity", desc: "Located on the 200 ft wide NH-205 highway connecting Chandigarh, Kharar and Kurali." },
   { icon: IndianRupee, title: "Affordable Housing", desc: "Perfect for middle-class families looking for their first home near Chandigarh." },
-  { icon: Building2, title: "Complete Township", desc: "Apartments, plots, villas and commercial spaces in one integrated development." },
+  { icon: Building2, title: "Complete Township", desc: "Luxury apartments, villas and commercial spaces in one integrated development." },
   { icon: TreePine, title: "Peaceful Living", desc: "Green surroundings, parks and family friendly environment." },
 ];
 
