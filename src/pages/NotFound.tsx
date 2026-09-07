@@ -6,6 +6,22 @@ const NotFound = () => {
 
   useEffect(() => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
+
+    document.title = "Page Not Found | KBP Smart City";
+
+    let robots = document.querySelector<HTMLMetaElement>('meta[name="robots"]');
+    if (!robots) {
+      robots = document.createElement("meta");
+      robots.name = "robots";
+      document.head.appendChild(robots);
+    }
+    robots.content = "noindex, nofollow";
+
+    return () => {
+      robots?.parentNode?.removeChild(robots);
+      document.title =
+        "KBP Smart City | 2BHK and 3BHK Luxury Apartment in Kharar Near Chandigarh";
+    };
   }, [location.pathname]);
 
   return (
