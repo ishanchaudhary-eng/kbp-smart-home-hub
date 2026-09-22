@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Award, Building2, Users, MapPin, Heart, Target } from "lucide-react";
 import ContactFooter from "@/components/sections/ContactFooter";
 import apartmentImg from "@/assets/apartment-exterior-1.webp";
+import kbpMohaliLogo from "@/assets/kbp-mohali.png.asset.json";
 
 const milestones = [
   { year: "1994", title: "Founded KBP Group", desc: "Started with a vision to build quality homes for every family." },
@@ -32,7 +33,7 @@ const About = () => (
             <p className="text-muted-foreground leading-relaxed">Every project reflects a commitment to quality construction, transparent dealings and customer satisfaction.</p>
           </div>
           <div className="rounded-2xl h-72 overflow-hidden shadow-lg">
-            <img src="/kbp-group-logo.png" alt="KBP Group Logo" className="w-full h-full object-cover" />
+            <img src={kbpMohaliLogo.url} alt="KBP Mohali" className="w-full h-full object-cover" />
           </div>
         </div>
 
