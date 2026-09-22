@@ -12,9 +12,15 @@ import AboutKBP from "@/components/sections/AboutKBP";
 import SiteVisitCTA from "@/components/sections/SiteVisitCTA";
 import ContactFooter from "@/components/sections/ContactFooter";
 import SectionDivider from "@/components/SectionDivider";
+import SeoMetadata from "@/components/SeoMetadata";
 
 const Index = () => (
   <main className="scroll-smooth">
+    <SeoMetadata
+      title="KBP Smart City | 2 BHK, 3 BHK & The Mansion Luxury Homes in Mohali"
+      description="Explore 2 BHK and 3 BHK luxury apartments, KBP The Mansion 3 BHK independent floors, and commercial spaces near Mohali and Chandigarh."
+      canonical="https://smartcitykbp.com/"
+    />
     <HeroSection />
     <QuickHighlights />
     <SectionDivider variant="gold-line" />

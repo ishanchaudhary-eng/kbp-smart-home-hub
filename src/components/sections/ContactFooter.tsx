@@ -2,6 +2,19 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LeadForm from "@/components/LeadForm";
 import kbpMohaliLogo from "@/assets/kbp-mohali-logo.png.asset.json";
+import { Link } from "react-router-dom";
+
+const quickLinks = [
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Apartments", href: "/apartments" },
+  { label: "The Mansion", href: "/the-mansion" },
+  { label: "Commercial", href: "/commercial" },
+  { label: "Amenities", href: "/amenities" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Location", href: "/location" },
+  { label: "Contact", href: "/#contact" },
+];
 
 const ContactFooter = () => (
   <footer id="contact" className="bg-primary text-primary-foreground">
@@ -13,7 +26,7 @@ const ContactFooter = () => (
             <img src={kbpMohaliLogo.url} alt="KBP Mohali" className="h-full w-full object-contain block" />
           </div>
           <p className="text-primary-foreground/70 mb-6 text-sm leading-relaxed">
-            Township by KBP Group on NH-205 Kharar–Kurali Highway. Apartments, villas and commercial spaces.
+            Township by KBP Group on NH-205 Kharar–Kurali Highway. Luxury apartments, KBP The Mansion independent floors and commercial spaces.
           </p>
           <div className="space-y-3">
             <div className="flex items-start gap-3">
@@ -39,8 +52,8 @@ const ContactFooter = () => (
         <div>
           <h3 className="font-bold text-lg mb-6 font-sans">Quick Links</h3>
           <div className="grid grid-cols-2 gap-2">
-            {["Home", "About Us", "Apartments", "Commercial", "Amenities", "Floor Plans", "Pricing", "Location", "Contact"].map((link) => (
-              <a key={link} href="#" className="text-sm text-primary-foreground/60 hover:text-secondary transition-colors py-1">{link}</a>
+            {quickLinks.map((link) => (
+              <Link key={link.label} to={link.href} className="text-sm text-primary-foreground/60 hover:text-secondary transition-colors py-1">{link.label}</Link>
             ))}
           </div>
 
