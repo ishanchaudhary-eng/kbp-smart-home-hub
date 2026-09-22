@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Home", href: "/#hero" },
   { label: "About", href: "/about" },
   { label: "Apartments", href: "/apartments" },
-  
+  { label: "The Mansion", href: "/the-mansion" },
   { label: "Commercial", href: "/commercial" },
   { label: "Amenities", href: "/amenities" },
   { label: "Location", href: "/location" },
@@ -50,7 +50,7 @@ const Navbar = () => {
                   <button
                     key={link.label}
                     onClick={() => handleNavClick(link.href)}
-                    className="px-3 py-2 text-sm font-medium text-primary-foreground/80 hover:text-secondary transition-colors"
+                    className="px-2 xl:px-3 py-2 text-xs xl:text-sm font-medium text-primary-foreground/80 hover:text-secondary transition-colors"
                   >
                     {link.label}
                   </button>
@@ -58,7 +58,7 @@ const Navbar = () => {
                   <Link
                     key={link.label}
                     to={link.href}
-                    className="px-3 py-2 text-sm font-medium text-primary-foreground/80 hover:text-secondary transition-colors"
+                    className="px-2 xl:px-3 py-2 text-xs xl:text-sm font-medium text-primary-foreground/80 hover:text-secondary transition-colors"
                   >
                     {link.label}
                   </Link>
