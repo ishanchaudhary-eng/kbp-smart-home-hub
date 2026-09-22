@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Award, Building2, Users, MapPin, Heart, Target } from "lucide-react";
 import ContactFooter from "@/components/sections/ContactFooter";
 import apartmentImg from "@/assets/apartment-exterior-1.webp";
+import kbpMohaliLogo from "@/assets/kbp-mohali-logo.png.asset.json";
 
 const milestones = [
   { year: "1994", title: "Founded KBP Group", desc: "Started with a vision to build quality homes for every family." },
@@ -31,8 +32,8 @@ const About = () => (
             <p className="text-muted-foreground leading-relaxed mb-4">Founded in 1994, KBP Group has grown from a small construction firm to one of Punjab's most respected real estate developers. With over 30 years of experience, we have delivered 50+ residential and commercial projects across the state.</p>
             <p className="text-muted-foreground leading-relaxed">Every project reflects a commitment to quality construction, transparent dealings and customer satisfaction.</p>
           </div>
-          <div className="rounded-2xl h-72 overflow-hidden shadow-lg">
-            <img src="/kbp-group-logo.png" alt="KBP Group Logo" className="w-full h-full object-cover" />
+          <div className="rounded-lg h-72 overflow-hidden shadow-lg bg-primary p-8 md:p-12">
+            <img src={kbpMohaliLogo.url} alt="KBP Mohali" className="w-full h-full object-contain" />
           </div>
         </div>
 

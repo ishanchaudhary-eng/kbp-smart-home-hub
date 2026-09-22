@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import MotionBackground from "@/components/MotionBackground";
+import kbpMohaliLogo from "@/assets/kbp-mohali-logo.png.asset.json";
 
 const AboutKBP = () => (
   <section id="about" className="py-20 relative overflow-hidden">
@@ -21,8 +22,8 @@ const AboutKBP = () => (
           </Link>
         </motion.div>
         <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-          <div className="rounded-2xl h-80 md:h-96 overflow-hidden shadow-lg">
-            <img src="/kbp-group-logo.png" alt="KBP Group" className="w-full h-full object-cover" />
+          <div className="rounded-lg h-80 md:h-96 overflow-hidden shadow-lg bg-primary p-8 md:p-12">
+            <img src={kbpMohaliLogo.url} alt="KBP Mohali" className="w-full h-full object-contain" />
           </div>
         </motion.div>
       </div>
