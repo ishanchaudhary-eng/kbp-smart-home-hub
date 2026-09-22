@@ -37,7 +37,7 @@ const Navbar = () => {
       <div className="flex items-stretch">
         {/* Logo — separate white block on the left, taller than nav */}
         <Link to="/" className="flex items-center justify-center shrink-0 z-10">
-          <img src={kbpMohaliLogo.url} alt="KBP Mohali" className="h-16 md:h-20 w-auto block" />
+          <img src={kbpMohaliLogo.url} alt="KBP Mohali" className="h-8 md:h-10 w-auto block" />
         </Link>
 
         {/* Nav bar fills the rest */}
