@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import kbpMohaliLogo from "@/assets/kbp-mohali-logo.png.asset.json";
 
 const navLinks = [
   { label: "Home", href: "/#hero" },
@@ -35,8 +36,8 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50">
       <div className="flex items-stretch">
         {/* Logo — separate white block on the left, taller than nav */}
-        <Link to="/" className="flex items-center justify-center shrink-0 z-10">
-          <img src="/kbp-group-logo.png" alt="KBP Group Logo" className="h-16 md:h-20 w-auto block" />
+        <Link to="/" className="flex h-16 w-28 items-center justify-center shrink-0 bg-primary p-2 md:h-20 md:w-36 md:p-3 z-10">
+          <img src={kbpMohaliLogo.url} alt="KBP Mohali" className="h-full w-full object-contain block" />
         </Link>
 
         {/* Nav bar fills the rest */}
